@@ -1,0 +1,55 @@
+Gameplay:
+	Snake:	
+		▪ Follow mouse
+		▪ Camera follow
+		▪ Health:
+			▪ Max Health.
+			▪ Take damage.
+			▪ Longer and wider scale with max health.
+			▪ Hitbox the whole body.
+	Rebirth:
+		▪ Eating it own tails
+		▪ Convert max health:
+			▪ Gain money.
+			▪ Gain score.
+			▪ Scale score with level.
+			▪ Lose all max halth
+		▪ Upgrades:
+			▪ Agility = + Move faster - Lose max health
+			▪ Digest = + More max health when eat food - Size increase lower
+			▪ Stretch = + Get longer faster
+			▪ Harvest = + More food - Food disappear faster
+			▪ Fresh = + Food stay longer - Less food
+			▪ ... 
+		▪ Go to an new map.
+	Map:
+		▪ Grid base.
+		▪ Access each grid.
+		▪ Types:
+			▪ Square.
+			▪ Plus.
+			▪ Diamond.
+	Foods:
+		▪ Randomly spawn.
+		▪ All food will give 10 max hp.
+		▪ Types:
+			▪ Apple - Extra 2 max hp.
+			▪ Cherry - Heal 2.
+			▪ Potato - 50% to reappear.
+			▪ Chilly - Take 1 damage then gain 35% movement speed for 5 sec.
+			▪ Watermelon - Extras 20 max hp but lose 80 movement speed for 3 sec.
+			▪ Corn - Randomly spawn 5 to 10 kernel.
+			▪ Kernel - Gain 1 max hp.
+			▪ Salad - Heal 20% hp.
+	Traps:
+		▪ Randomly spawn.
+		▪ Spawn chance scale with difficulty.
+		▪ Populated chance.
+			Chance to spread more from it spawn point
+		▪ Types:
+			▪ Spike - Deal damage once when stepped on.
+			▪ Puddle - Slow down movement.
+			▪ Mine - Explode upon step or X time then disappear.
+			▪ Cutter - Strike in an circle shape ervery X sec.
+			▪ Flame - Rapidly deal damage and give snake an small speed boost.
+			▪ Bomb - Randomly drop that explode.
