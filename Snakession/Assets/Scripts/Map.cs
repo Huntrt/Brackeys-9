@@ -21,11 +21,18 @@ public class Map : MonoBehaviour
 	public List<PlotData> emptyPlots = new List<PlotData>();
 	public List<PlotData> filledPlots = new List<PlotData>();
 	public LayerMask mapLayer;
+	public Action onMapCreate;
 
 	void Start()
 	{
+		CreateMap(); //temp: create map at start for now
+	}
+
+	void CreateMap()
+	{
 		//Generate plot from settings
 		emptyPlots = plotSettings.GeneratePlot();
+		onMapCreate?.Invoke();
 	}
 
 	public GameObject PlaceObject(Vector2 coord, GameObject obj)
