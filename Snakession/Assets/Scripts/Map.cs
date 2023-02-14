@@ -18,8 +18,8 @@ public class Map : MonoBehaviour
 	}
 	#endregion
 	
-	[SerializeField] List<PlotData> emptyPlots = new List<PlotData>();
-	[SerializeField] List<PlotData> filledPlots = new List<PlotData>();
+	public List<PlotData> emptyPlots = new List<PlotData>();
+	public List<PlotData> filledPlots = new List<PlotData>();
 	public LayerMask mapLayer;
 
 	void Start()
