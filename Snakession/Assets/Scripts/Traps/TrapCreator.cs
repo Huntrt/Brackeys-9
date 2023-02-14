@@ -27,7 +27,7 @@ public class TrapCreator : MonoBehaviour
         SpawningTrap();
     }
 
-	void PlacingTrap()
+	public void PlacingTrap()
 	{
 		//Go through all the quantity need to place
 		for (int q = 0; q < placer.quantity; q++)

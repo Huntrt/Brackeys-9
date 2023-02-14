@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 using System;
 
@@ -18,10 +19,10 @@ public class Map : MonoBehaviour
 	}
 	#endregion
 	
+	public UnityEvent onMapCreate;
 	public List<PlotData> emptyPlots = new List<PlotData>();
 	public List<PlotData> filledPlots = new List<PlotData>();
 	public LayerMask mapLayer;
-	public Action onMapCreate;
 
 	void Start()
 	{
@@ -32,7 +33,7 @@ public class Map : MonoBehaviour
 	{
 		//Generate plot from settings
 		emptyPlots = plotSettings.GeneratePlot();
-		onMapCreate?.Invoke();
+		onMapCreate.Invoke();
 	}
 
 	public GameObject PlaceObject(Vector2 coord, GameObject obj)

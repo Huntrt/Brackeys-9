@@ -477,17 +477,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 706146557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7f6d33187c9e1f49af60f97466d2077, type: 3}
+  m_Script: {fileID: 11500000, guid: 4734ec86a08f2a749a55d2d5b6e25c7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnRate: 0.5
-  spawnChance: 100
-  traps:
-  - obj: {fileID: 4974741918930583248, guid: 30dde1a8250441444a86289563d951d2, type: 3}
-    weight: 10
-    requirement: 0
-    populateChance: 10
-    populateLimit: 3
+  placer:
+    quantity: 10
+    chance: 100
+    placeTraps:
+    - obj: {fileID: 4974741918930583248, guid: 30dde1a8250441444a86289563d951d2, type: 3}
+      weight: 0
+      requirement: 0
+      populateChance: 10
+      populateLimit: 3
+  spawner:
+    rate: 0
+    chance: 0
+    rateTimer: 0
+    spawnTraps: []
 --- !u!1 &716201319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1470,6 +1476,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352345d0ca1632c478c25e98fad5fdd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onMapCreate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 706146559}
+        m_TargetAssemblyTypeName: TrapCreator, Assembly-CSharp
+        m_MethodName: PlacingTrap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   emptyPlots: []
   filledPlots: []
   mapLayer:
