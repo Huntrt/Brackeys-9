@@ -1,10 +1,9 @@
 using UnityEngine;
-using System;
 
 public class Foods : MonoBehaviour
 {
     public int feed;
-	public Action onConsume;
+	public Vector2 spawnCoord;
 
 	void OnCollisionEnter2D(Collision2D other) 
 	{
@@ -15,9 +14,9 @@ public class Foods : MonoBehaviour
 		}
 	}
 
-	public void Consume()
+	protected virtual void Consume()
 	{
-		onConsume?.Invoke();
-		Destroy(gameObject);
+		//Pluck object where this food got spawn (also destroy)
+		Map.i.PluckObject(spawnCoord);
 	}
 }
