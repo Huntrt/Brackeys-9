@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SankeBody : MonoBehaviour
+public class SnakeBody : MonoBehaviour
 {
 	[SerializeField] Snake snake;
 	public LineRenderer line;
