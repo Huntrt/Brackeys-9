@@ -9,12 +9,12 @@ public class Foods : MonoBehaviour
 	{
 		if(other.collider.CompareTag("Player"))
 		{
-			other.collider.GetComponent<Snake>().Eat(feed);
-			Consume();
+			Snake.i.Eat(feed);
+			Consumed();
 		}
 	}
 
-	protected virtual void Consume()
+	protected virtual void Consumed()
 	{
 		//Pluck object where this food got spawn (also destroy)
 		Map.i.PluckObject(spawnCoord);

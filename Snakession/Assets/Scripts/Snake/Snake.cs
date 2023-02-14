@@ -2,6 +2,20 @@ using UnityEngine;
 
 public class Snake : MonoBehaviour
 {
+	#region Set this class to singleton
+	static Snake _i; public static Snake i
+	{
+		get
+		{
+			if(_i==null)
+			{
+				_i = GameObject.FindObjectOfType<Snake>();
+			}
+			return _i;
+		}
+	}
+	#endregion
+
     public float maxHealth, health;
 	//Every X max health will grow
 	public float growthEveryHealth;
