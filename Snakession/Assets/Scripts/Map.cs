@@ -77,8 +77,8 @@ public class Map : MonoBehaviour
 		//% Draw an grey small cube on each plot
 		for (int p = 0; p < emptyPlots.Count; p++)
 		{
-			Gizmos.color = new Color(77,77,77,10); //transparent gray
-			Gizmos.DrawCube(emptyPlots[p].position, Vector3.one * 0.2f);
+			Gizmos.color = new Color(1f,1f,1f,0.1f); //transparent white
+			Gizmos.DrawWireCube(emptyPlots[p].position, Vector3.one * 0.2f);
 		}
 	}
 
