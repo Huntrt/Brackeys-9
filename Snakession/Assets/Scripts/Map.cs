@@ -74,7 +74,7 @@ public class Map : MonoBehaviour
 
 	void OnDrawGizmos() 
 	{
-		//% Draw an grey small cube on each plot
+		//test: Draw an grey small cube on each plot
 		for (int p = 0; p < emptyPlots.Count; p++)
 		{
 			Gizmos.color = new Color(1f,1f,1f,0.1f); //transparent white
