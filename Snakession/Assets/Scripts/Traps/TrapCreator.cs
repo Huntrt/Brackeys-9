@@ -2,12 +2,21 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class TrapSpawner : MonoBehaviour
+public class TrapCreator : MonoBehaviour
 {
-	
-	public float spawnRate, spawnChance; float spawnRateTimer;
-	[SerializeField] TrapDrop[] traps;
-	[System.Serializable] class TrapDrop : WeightDrop
+	[SerializeField] Placer placer; [System.Serializable] public class Placer
+	{
+		public float quantity, chance; 
+		public TrapDrop[] placeTraps;
+	}
+	[SerializeField] Spawner spawner; [System.Serializable] public class Spawner
+	{
+		public float rate, chance; 
+		[HideInInspector] public float rateTimer;
+		public TrapDrop[] spawnTraps;
+	}
+
+	[System.Serializable] public class TrapDrop : WeightDrop
 	{
 		public float populateChance;
 		public int populateLimit;
@@ -18,27 +27,43 @@ public class TrapSpawner : MonoBehaviour
         SpawningTrap();
     }
 
-	void SpawningTrap()
+	void PlacingTrap()
 	{
-		//Counting the timer until reached the rate
-		spawnRateTimer += Time.deltaTime; if(spawnRateTimer >= spawnRate)
+		//Go through all the quantity need to place
+		for (int q = 0; q < placer.quantity; q++)
 		{
-			//Does spawn chanced meet the random number
-			bool chanced = spawnChance >= Random.Range(0f, 100f);
-			//If allow to spawn by chance
-			if(chanced)
-			{
-				//Get any random empty plot
-				int ranPlot = Random.Range(0, Map.i.emptyPlots.Count);
-				//Drop the trap at coordinate of random empty plot has get
-				DropTrap(Map.i.emptyPlots[ranPlot].coordinate);
-			}
-			//Reset rate timer
-			spawnRateTimer -= spawnRateTimer;
+			//Create placer's traps with placer's chance
+			CreateTrap(placer.placeTraps, placer.chance);
 		}
 	}
 
-	public void DropTrap(Vector2 coord)
+	void SpawningTrap()
+	{
+		//Counting the timer until reached the rate
+		spawner.rateTimer += Time.deltaTime; if(spawner.rateTimer >= spawner.rate)
+		{
+			//Create spawner's traps with spawner's chance
+			CreateTrap(spawner.spawnTraps, spawner.chance);
+			//Reset rate timer
+			spawner.rateTimer -= spawner.rateTimer;
+		}
+	}
+
+	void CreateTrap(TrapDrop[] traps, float chance)
+	{
+		//Does given chanced meet the random number
+		bool chanced = chance >= Random.Range(0f, 100f);
+		//If allow to create by chance
+		if(chanced)
+		{
+			//Get any random empty plot
+			int ranPlot = Random.Range(0, Map.i.emptyPlots.Count);
+			//Drop the given trap list at coordinate of random empty plot has get
+			DropTrap(Map.i.emptyPlots[ranPlot].coordinate, traps);
+		}
+	}
+
+	public void DropTrap(Vector2 coord, TrapDrop[] traps)
 	{
 		//Weight the traps
 		WeightDrop weighted = WeightSystem.Weighting((WeightDrop[])traps);
