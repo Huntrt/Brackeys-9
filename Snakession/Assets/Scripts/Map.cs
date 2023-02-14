@@ -18,22 +18,67 @@ public class Map : MonoBehaviour
 	}
 	#endregion
 	
-	public PlotData[] plots;
+	[SerializeField] List<PlotData> emptyPlots = new List<PlotData>();
+	[SerializeField] List<PlotData> filledPlots = new List<PlotData>();
 	public LayerMask mapLayer;
 
 	void Start()
 	{
 		//Generate plot from settings
-		plots = plotSettings.GeneratePlot();
+		emptyPlots = plotSettings.GeneratePlot();
+	}
+
+	public bool PlaceObject(Vector2 coord, GameObject obj)
+	{
+		//Find the empty plot
+		PlotData empty = SearchPlot(coord, emptyPlots);
+		//Failed to place if given plot is not empty
+		if(empty == null) return false;
+		//Create given object at this empty plot position
+		empty.obj = Instantiate(obj, empty.position, Quaternion.identity);
+		//Empty plot has been filled
+		filledPlots.Add(empty);
+		//Remove the plot got fill from empty
+		emptyPlots.Remove(empty);
+		//Succesfully place given obj
+		return true;
+	}
+
+	public bool PluckObject(Vector2 coord)
+	{
+		//Find the filled plot
+		PlotData filled = SearchPlot(coord, filledPlots);
+		//Failed to pluck if given plot is not fill
+		if(filled == null) return false;
+		//Destroy the object in filled plot
+		Destroy(filled.obj);
+		//Filled plot are now empty
+		emptyPlots.Add(filled);
+		//Remove the plot got empty from fill
+		filledPlots.Remove(filled);
+		//Successfully pluck obj at given coordinate
+		return true;
+	}
+
+	public PlotData SearchPlot(Vector2 coord, List<PlotData> plotList)
+	{
+		//Go through all the given plot list
+		for (int e = 0; e < plotList.Count; e++)
+		{
+			//Return plot inside given list that has the same coordinate as given
+			if(plotList[e].coordinate == coord) return plotList[e];
+		}
+		//Return nothing if cant find in given plot
+		return null;
 	}
 
 	void OnDrawGizmos() 
 	{
 		//% Draw an grey small cube on each plot
-		for (int p = 0; p < plots.Length; p++)
+		for (int p = 0; p < emptyPlots.Count; p++)
 		{
 			Gizmos.color = Color.gray;
-			Gizmos.DrawCube(plots[p].position, Vector3.one * 0.2f);
+			Gizmos.DrawCube(emptyPlots[p].position, Vector3.one * 0.2f);
 		}
 	}
 
@@ -43,7 +88,7 @@ public class Map : MonoBehaviour
 		[SerializeField] float spacing;
 		[SerializeField] Vector2Int size;
 		
-		public PlotData[] GeneratePlot()
+		public List<PlotData> GeneratePlot()
 		{
 			//List of plots gonne be return
 			List<PlotData> plots = new List<PlotData>();
@@ -61,8 +106,7 @@ public class Map : MonoBehaviour
 				//Create plot at coordinate and position then add into list
 				plots.Add(new PlotData(plots.Count, coord, pos));
 			}
-			//Return the plot list as array
-			return plots.ToArray();
+			return plots;
 		}
 	}
 }
@@ -72,7 +116,7 @@ public class Map : MonoBehaviour
 	public int index = -1;
 	public Vector2Int coordinate;
 	public Vector2 position;
-	public bool empty = true;
+	public GameObject obj;
 
 	public PlotData(int index, Vector2Int coord, Vector2 pos)
 	{
