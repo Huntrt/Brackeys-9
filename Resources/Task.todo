@@ -6,7 +6,7 @@ Gameplay:
 		▪ Health:
 			✓ Max Health.
 			✓ Take damage.
-			▪ Longer and wider scale with max health.
+			✓ Longer and wider scale with max health.
 			▪ Hitbox the whole body.
 	Rebirth:
 		▪ Eating it own tails
@@ -31,7 +31,7 @@ Gameplay:
 			▪ Plus.
 			▪ Diamond.
 	Foods:
-		✓ Randomly spawn. @doing
+		✓ Randomly spawn.
 		✓ All food will give max hp.
 		▪ Types:
 			▪ Apple - Extra 2 max hp.

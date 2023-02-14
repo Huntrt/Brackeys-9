@@ -1408,3 +1408,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   health: 10
+  growthEveryHealth: 5
+  body: {fileID: 2049876867}

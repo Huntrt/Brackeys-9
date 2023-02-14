@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class SankeBody : MonoBehaviour
 {
-	public Snake snake;
+	[SerializeField] Snake snake;
 	public LineRenderer line;
 	[SerializeField] float spacing;
 	[SerializeField] Transform head;
@@ -18,8 +18,6 @@ public class SankeBody : MonoBehaviour
 
 	void LateUpdate()
 	{
-		//test: grow part
-		if(Input.GetKeyDown(KeyCode.Space)) Grow();
 		//Get distance between the head and the first part
 		float dist = Vector2.Distance((Vector3)head.position, partPos[0]);
 		//If distance far enough from spacing
