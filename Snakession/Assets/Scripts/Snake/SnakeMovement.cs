@@ -22,14 +22,8 @@ public class SnakeMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		//If has reached 0.1 of an step toward mouse
-		if(Vector2.Distance(rb.position, mousePos) <= moveSpeed/80)
-		{
-			//Stop moving
-			return;
-		}
 		//Make object slowly facing toward mouse position
-		head.up = Vector3.Slerp(head.up, (mousePos - rb.position), rotateSpeed * Time.deltaTime);
+		head.up = Vector3.Slerp(head.up, (mousePos - rb.position).normalized, rotateSpeed * Time.deltaTime);
 		//Get velocity by multiply speed with where object facing
 	  	Vector2 velocity = head.up * moveSpeed;
 		//Moving the player toward velocity has get
