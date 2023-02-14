@@ -32,7 +32,13 @@ public class FoodSpawner : MonoBehaviour
 
 	public void DropFood(Vector2 coord)
 	{
-		//Place object at given coord with the foods has been weight
-		Map.i.PlaceObject(coord, WeightSystem.Weighting(foods).obj);
+		//Spawn object at given coord on the map with the foods has been weighted
+		GameObject spawn = Map.i.PlaceObject(coord, WeightSystem.Weighting(foods).obj);
+		//If successfully psawn food
+		if(spawn != null)
+		{
+			//Set the object has been spawn's spawn coordinate
+			spawn.GetComponent<Foods>().spawnCoord = coord;
+		}
 	}
 }
