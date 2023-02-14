@@ -18,11 +18,9 @@ public class SnakeBody : MonoBehaviour
 		partPos.Add(head.position);
 	}
 
-	void LateUpdate()
+	void FixedUpdate()
 	{
 		DrawBody();
-		//Create collider for body
-		bodyCollider.SetPoints(bodyPart);
 	}
 
 	void DrawBody()
@@ -53,6 +51,8 @@ public class SnakeBody : MonoBehaviour
 		}
 		//Add all the part position to line
 		line.SetPositions(bodyPart3d);
+		//Create collider for body
+		bodyCollider.SetPoints(bodyPart);
 	}
 
 	public void Grow()
@@ -62,5 +62,7 @@ public class SnakeBody : MonoBehaviour
 		partPos.Add(partPos[partPos.Count-1]);
 		//Set line position the same as body part count
 		line.positionCount = bodyPart.Count;
+		//Draw body instantly after grow
+		DrawBody();
 	}
 }
