@@ -12,10 +12,10 @@ public class FoodSpawner : MonoBehaviour
 
 	void SpawningFood()
 	{
-		spawnRateTimer += Time.deltaTime;
-		if(spawnRateTimer >= spawnRate)
+		//Counting the timer until reached the rate
+		spawnRateTimer += Time.deltaTime; if(spawnRateTimer >= spawnRate)
 		{
-			//Does spawn chanced meet the random number
+			//Does spawn chance meet the random number
 			bool chanced = spawnChance >= Random.Range(0f, 100f);
 			//If allow to spawn by chance
 			if(chanced)
@@ -34,7 +34,7 @@ public class FoodSpawner : MonoBehaviour
 	{
 		//Spawn object at given coord on the map with the foods has been weighted
 		GameObject spawn = Map.i.PlaceObject(coord, WeightSystem.Weighting(foods).obj);
-		//If successfully psawn food
+		//If successfully spawn food
 		if(spawn != null)
 		{
 			//Set the object has been spawn's spawn coordinate
