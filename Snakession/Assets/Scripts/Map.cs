@@ -28,12 +28,12 @@ public class Map : MonoBehaviour
 		emptyPlots = plotSettings.GeneratePlot();
 	}
 
-	public bool PlaceObject(Vector2 coord, GameObject obj)
+	public GameObject PlaceObject(Vector2 coord, GameObject obj)
 	{
 		//Find the empty plot
 		PlotData empty = SearchPlot(coord, emptyPlots);
 		//Failed to place if given plot is not empty
-		if(empty == null) return false;
+		if(empty == null) return null;
 		//Create given object at this empty plot position
 		empty.obj = Instantiate(obj, empty.position, obj.transform.rotation);
 		//Empty plot has been filled
@@ -41,7 +41,7 @@ public class Map : MonoBehaviour
 		//Remove the plot got fill from empty
 		emptyPlots.Remove(empty);
 		//Succesfully place given obj
-		return true;
+		return empty.obj;
 	}
 
 	public bool PluckObject(Vector2 coord)
@@ -77,7 +77,7 @@ public class Map : MonoBehaviour
 		//% Draw an grey small cube on each plot
 		for (int p = 0; p < emptyPlots.Count; p++)
 		{
-			Gizmos.color = Color.gray;
+			Gizmos.color = new Color(77,77,77,10); //transparent gray
 			Gizmos.DrawCube(emptyPlots[p].position, Vector3.one * 0.2f);
 		}
 	}
