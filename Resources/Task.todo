@@ -3,11 +3,11 @@ Gameplay:
 		✓ Follow mouse
 		✓ Camera follow
 		✓ Body
-		▪ Health:
+		✓ Health:
 			✓ Max Health.
 			✓ Take damage.
 			✓ Longer and wider scale with max health.
-			▪ Hitbox the whole body.
+			✓ Hitbox the whole body.
 	Rebirth:
 		▪ Eating it own tails
 		▪ Convert max health:
@@ -43,10 +43,10 @@ Gameplay:
 			▪ Kernel - Gain 1 max hp.
 			▪ Salad - Heal 20% hp.
 	Traps:
-		▪ Randomly spawn.
+		✓ Randomly spawn.
 		▪ Spawn chance scale with difficulty. @consider
-		▪ Trap unlock by level. @consider
-		▪ Populated chance.
+		✓ Trap unlock by level.
+		✓ Populated chance.
 			Chance to spread more from it spawn point
 		▪ Types:
 			▪ Spike - Deal damage once when stepped on.
