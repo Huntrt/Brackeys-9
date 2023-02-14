@@ -4,6 +4,7 @@ public class SnakeMovement : MonoBehaviour
 {
 	public float moveSpeed;
 	public float rotateSpeed;
+	[SerializeField] Transform head;
 	[SerializeField] Rigidbody2D rb;
 	Vector2 mousePos;
 	Camera cam;
@@ -28,9 +29,9 @@ public class SnakeMovement : MonoBehaviour
 			return;
 		}
 		//Make object slowly facing toward mouse position
-		transform.up = Vector3.Slerp(transform.up, (mousePos - rb.position), rotateSpeed * Time.deltaTime);
+		head.up = Vector3.Slerp(head.up, (mousePos - rb.position), rotateSpeed * Time.deltaTime);
 		//Get velocity by multiply speed with where object facing
-	  	Vector2 velocity = transform.up * moveSpeed;
+	  	Vector2 velocity = head.up * moveSpeed;
 		//Moving the player toward velocity has get
 		rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
 	}
