@@ -6,10 +6,11 @@ public class SnakeBody : MonoBehaviour
 	[SerializeField] Snake snake;
 	public LineRenderer line;
 	public EdgeCollider2D bodyCollider;
-	[SerializeField] float spacing;
+	public BoxCollider2D headCollider;
 	[SerializeField] Transform head;
-	[SerializeField] List<Vector2> bodyPart = new List<Vector2>();
-	[SerializeField] List<Vector2> partPos = new List<Vector2>();
+	[SerializeField] float spacing;
+	List<Vector2> bodyPart = new List<Vector2>();
+	List<Vector2> partPos = new List<Vector2>();
 
 	void Start()
 	{

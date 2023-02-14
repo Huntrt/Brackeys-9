@@ -20,7 +20,7 @@ public class Snake : MonoBehaviour
 	//Every X max health will grow
 	public float growthEveryHealth;
 	float growing;
-	[SerializeField] SnakeBody body;
+	public SnakeBody body;
 
 	public void Eat(int amount)
 	{
