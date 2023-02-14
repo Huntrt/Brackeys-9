@@ -5,10 +5,11 @@ public class SankeBody : MonoBehaviour
 {
 	[SerializeField] Snake snake;
 	public LineRenderer line;
+	public EdgeCollider2D bodyCollider;
 	[SerializeField] float spacing;
 	[SerializeField] Transform head;
-	[SerializeField] List<Vector3> bodyPart = new List<Vector3>();
-	[SerializeField] List<Vector3> partPos = new List<Vector3>();
+	[SerializeField] List<Vector2> bodyPart = new List<Vector2>();
+	[SerializeField] List<Vector2> partPos = new List<Vector2>();
 
 	void Start()
 	{
@@ -18,13 +19,20 @@ public class SankeBody : MonoBehaviour
 
 	void LateUpdate()
 	{
+		DrawBody();
+		//Create collider for body
+		bodyCollider.SetPoints(bodyPart);
+	}
+
+	void DrawBody()
+	{
 		//Get distance between the head and the first part
-		float dist = Vector2.Distance((Vector3)head.position, partPos[0]);
+		float dist = Vector2.Distance((Vector2)head.position, partPos[0]);
 		//If distance far enough from spacing
 		if(dist > spacing)
 		{
 			//Get the direction from the first part to head
-			Vector3 dir = ((Vector3)head.position - partPos[0]).normalized;
+			Vector2 dir = ((Vector2)head.position - partPos[0]).normalized;
 			//Insert position from the first toward direction using spacing
 			partPos.Insert(0, partPos[0] + dir * spacing);
 			//Remove the old first part
@@ -32,14 +40,18 @@ public class SankeBody : MonoBehaviour
 			//Get leftover distance
 			dist -= spacing;
 		}
+		//Array for body part's 3d position
+		Vector3[] bodyPart3d = new Vector3[bodyPart.Count];
 		//Go through all the body part
-		for (int p = 0; p < bodyPart.Count; p++)
+		for (int b = 0; b < bodyPart.Count; b++)
 		{
 			//Lerping this part to it next part using progress of distance
-			bodyPart[p] = Vector2.Lerp(partPos[p+1], partPos[p], dist/spacing);
+			bodyPart[b] = Vector2.Lerp(partPos[b+1], partPos[b], dist/spacing);
+			//Save this body part 3d position
+			bodyPart3d[b] = bodyPart[b];
 		}
-		//Add all the part to line position
-		line.SetPositions(bodyPart.ToArray());
+		//Add all the part position to line
+		line.SetPositions(bodyPart3d);
 	}
 
 	public void Grow()
