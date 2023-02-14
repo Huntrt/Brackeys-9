@@ -31,8 +31,8 @@ Gameplay:
 			▪ Plus.
 			▪ Diamond.
 	Foods:
-		▪ Randomly spawn. @doing
-		▪ All food will give 10 max hp.
+		✓ Randomly spawn. @doing
+		✓ All food will give max hp.
 		▪ Types:
 			▪ Apple - Extra 2 max hp.
 			▪ Cherry - Heal 2.
@@ -44,7 +44,8 @@ Gameplay:
 			▪ Salad - Heal 20% hp.
 	Traps:
 		▪ Randomly spawn.
-		▪ Spawn chance scale with difficulty.
+		▪ Spawn chance scale with difficulty. @consider
+		▪ Trap unlock by level. @consider
 		▪ Populated chance.
 			Chance to spread more from it spawn point
 		▪ Types:
