@@ -35,7 +35,7 @@ public class Map : MonoBehaviour
 		//Failed to place if given plot is not empty
 		if(empty == null) return false;
 		//Create given object at this empty plot position
-		empty.obj = Instantiate(obj, empty.position, Quaternion.identity);
+		empty.obj = Instantiate(obj, empty.position, obj.transform.rotation);
 		//Empty plot has been filled
 		filledPlots.Add(empty);
 		//Remove the plot got fill from empty
