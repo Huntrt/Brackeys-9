@@ -5,8 +5,7 @@ public class SnakeBody : MonoBehaviour
 {
 	[SerializeField] Snake snake;
 	public LineRenderer line;
-	public EdgeCollider2D bodyCollider;
-	public BoxCollider2D headCollider;
+	public EdgeCollider2D[] bodyColliders;
 	[SerializeField] Transform head;
 	[SerializeField] float spacing;
 	List<Vector2> bodyPart = new List<Vector2>();
@@ -51,8 +50,9 @@ public class SnakeBody : MonoBehaviour
 		}
 		//Add all the part position to line
 		line.SetPositions(bodyPart3d);
-		//Create collider for body
-		bodyCollider.SetPoints(bodyPart);
+		//Set points for both trigger and collision collider
+		bodyColliders[0].SetPoints(bodyPart);
+		bodyColliders[1].SetPoints(bodyPart);
 	}
 
 	public void Grow()
