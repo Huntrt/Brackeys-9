@@ -4,8 +4,8 @@ Gameplay:
 		✓ Camera follow
 		✓ Body @consider
 		▪ Health:
-			▪ Max Health.
-			▪ Take damage.
+			✓ Max Health.
+			✓ Take damage.
 			▪ Longer and wider scale with max health.
 			▪ Hitbox the whole body.
 	Rebirth:
@@ -24,14 +24,14 @@ Gameplay:
 			▪ ... 
 		▪ Go to an new map.
 	Map:
-		▪ Grid base.
-		▪ Access each grid.
+		✓ Grid base.
+		✓ Access each grid.
 		▪ Types:
 			▪ Square.
 			▪ Plus.
 			▪ Diamond.
 	Foods:
-		▪ Randomly spawn.
+		▪ Randomly spawn. @doing
 		▪ All food will give 10 max hp.
 		▪ Types:
 			▪ Apple - Extra 2 max hp.
