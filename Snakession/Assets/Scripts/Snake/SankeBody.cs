@@ -3,32 +3,53 @@ using UnityEngine;
 
 public class SankeBody : MonoBehaviour
 {
+	public Snake snake;
 	public LineRenderer line;
-	public Transform head;
-	public int length;
-	public float width;
-	public float segmentSpeed;
-	public float minimumSpacing;
-	public Vector3[] segmentPos; Vector3[] segmentVel;
+	[SerializeField] float spacing;
+	[SerializeField] Transform head;
+	[SerializeField] List<Vector3> bodyPart = new List<Vector3>();
+	[SerializeField] List<Vector3> partPos = new List<Vector3>();
 
-    void Start()
-    {
-		line.positionCount = length;
-        segmentPos = new Vector3[length];
-        segmentVel = new Vector3[length];
-    }
-	
-    void Update()
-    {
-		//Segment 0 start at the head
-        segmentPos[0] = head.position;
-		//Go through all the segment after head
-		for (int s = 1; s < segmentPos.Length; s++)
+	void Start()
+	{
+		//Add the head's position
+		partPos.Add(head.position);
+	}
+
+	void LateUpdate()
+	{
+		//test: grow part
+		if(Input.GetKeyDown(KeyCode.Space)) Grow();
+		//Get distance between the head and the first part
+		float dist = Vector2.Distance((Vector3)head.position, partPos[0]);
+		//If distance far enough from spacing
+		if(dist > spacing)
 		{
-			//Slowly move this segment toward previous segment in head direction with speed has set
-			segmentPos[s] = Vector3.SmoothDamp(segmentPos[s], segmentPos[s-1] - head.right * minimumSpacing, ref segmentVel[s], segmentSpeed);
+			//Get the direction from the first part to head
+			Vector3 dir = ((Vector3)head.position - partPos[0]).normalized;
+			//Insert position from the first toward direction using spacing
+			partPos.Insert(0, partPos[0] + dir * spacing);
+			//Remove the old first part
+			partPos.RemoveAt(partPos.Count - 1);
+			//Get leftover distance
+			dist -= spacing;
 		}
-		//Add all segment to line position
-		line.SetPositions(segmentPos);
-    }
+		//Go through all the body part
+		for (int p = 0; p < bodyPart.Count; p++)
+		{
+			//Lerping this part to it next part using progress of distance
+			bodyPart[p] = Vector2.Lerp(partPos[p+1], partPos[p], dist/spacing);
+		}
+		//Add all the part to line position
+		line.SetPositions(bodyPart.ToArray());
+	}
+
+	public void Grow()
+	{
+		//Grow another part 
+		bodyPart.Add(partPos[partPos.Count-1]);
+		partPos.Add(partPos[partPos.Count-1]);
+		//Set line position the same as body part count
+		line.positionCount = bodyPart.Count;
+	}
 }

@@ -2,7 +2,7 @@ Gameplay:
 	Snake:	
 		✓ Follow mouse
 		✓ Camera follow
-		✓ Body @caution
+		✓ Body
 		▪ Health:
 			✓ Max Health.
 			✓ Take damage.
