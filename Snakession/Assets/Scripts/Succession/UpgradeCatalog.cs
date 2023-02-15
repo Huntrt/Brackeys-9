@@ -10,7 +10,7 @@ public class UpgradeCatalog : MonoBehaviour
 	Snake snake; void Start() {snake = Snake.i;}
 
 	//USe upgrade relied on string to invoke correct function
-	public void USeUpgrade(Upgrades upgrade) {Invoke(upgrade + "Upgrading", 0);}
+	public void UseUpgrade(Upgrades upgrade) {Invoke(upgrade + "Upgrading", 0);}
 
 	void HasteUpgrading() 
 	{
