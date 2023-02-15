@@ -5,12 +5,7 @@ using TMPro;
 public class UpgradeManager : MonoBehaviour
 {
 	[SerializeField] UpgradeCatalog catalog;
-	[SerializeField] UpgradeWeight[] upgradeDrops;
-	[System.Serializable] public class UpgradeWeight
-	{
-		public UpgradeInfo info;
-		public float weight;
-	}
+	[SerializeField] UpgradeInfo[] upgradeInfos;
 
     [SerializeField] PanelGUI[] panels;
 	[System.Serializable] class PanelGUI
@@ -26,7 +21,7 @@ public class UpgradeManager : MonoBehaviour
 		for (int p = 0; p < panels.Length; p++)
 		{
 			//Weighting to get upgrade info
-			UpgradeInfo info = Weighting().info;
+			UpgradeInfo info = Weighting();
 			//@ Apply info has weighted to this panel
 			panels[p].nameText.text = info.name;
 			panels[p].descText.text = info.description;
@@ -37,27 +32,27 @@ public class UpgradeManager : MonoBehaviour
 		}
 	}
 
-    public UpgradeWeight Weighting()
+    public UpgradeInfo Weighting()
 	{
 		//Get the total sum of all drops's weight
-		float sum = 0; for (int d = 0; d < upgradeDrops.Length; d++)
+		float sum = 0; for (int d = 0; d < upgradeInfos.Length; d++)
 		{
 			//Added this drop weight to the sum
-			sum += upgradeDrops[d].weight;
+			sum += upgradeInfos[d].weight;
 		}
 		//Randomize sum
 		sum = Random.Range(0, sum);
 		//Go through all the drops
-		for (int d = 0; d < upgradeDrops.Length; d++)
+		for (int d = 0; d < upgradeInfos.Length; d++)
 		{
 			//If this drop weight take all the sum
-			if(sum - upgradeDrops[d].weight <= 0)
+			if(sum - upgradeInfos[d].weight <= 0)
 			{
 				//Return this drop
-				return upgradeDrops[d];
+				return upgradeInfos[d];
 			}
 			//Sum now lost this drop weight if havent drop
-			else sum -= upgradeDrops[d].weight;
+			else sum -= upgradeInfos[d].weight;
 		}
 		//? This should never fail to return any drop
 		return null;
