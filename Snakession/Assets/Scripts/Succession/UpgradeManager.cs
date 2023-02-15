@@ -2,7 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-public class UpgradeSetup : MonoBehaviour
+public class UpgradeManager : MonoBehaviour
 {
 	[SerializeField] UpgradeCatalog catalog;
 	[SerializeField] UpgradeWeight[] upgradeDrops;
