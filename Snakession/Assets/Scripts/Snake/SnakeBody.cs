@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class SnakeBody : MonoBehaviour
 {
-	[SerializeField] Snake snake;
 	[SerializeField] float spacing;
 	public LineRenderer line;
 	public Transform head;
@@ -23,7 +22,7 @@ public class SnakeBody : MonoBehaviour
 	}
 
 	//bug: body will struggle to follow head with fast speed;
-	void DrawBody()
+	public void DrawBody()
 	{
 		//Get distance between the head and the first part
 		float dist = Vector2.Distance((Vector2)head.position, partPos[0]);
@@ -31,7 +30,7 @@ public class SnakeBody : MonoBehaviour
 		if(dist > spacing)
 		{
 			//Get the direction from the first part to head
-			Vector2 dir = ((Vector2)head.position - partPos[0]).normalized;
+			Vector2 dir = ((Vector2)head.position - partPos[0]);
 			//Insert position from the first toward direction using spacing
 			partPos.Insert(0, partPos[0] + dir * spacing);
 			//Remove the old first part
