@@ -1684,7 +1684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   snake: {fileID: 2049876868}
-  maxHealthRequired: 20
+  maxHealthRequired: 50
   tail: {fileID: 783826421}
 --- !u!114 &2049876864
 MonoBehaviour:
@@ -1698,7 +1698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2207dddd608650b4185936923b47fcfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 40
+  moveSpeed: 7
   rotateSpeed: 40
   head: {fileID: 1820746345}
   rb: {fileID: 1820746348}
@@ -1732,7 +1732,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52ff60495d0ebb4e803b138de0d8fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snake: {fileID: 2049876868}
   spacing: 0.2
   line: {fileID: 1551173249}
   head: {fileID: 1820746345}

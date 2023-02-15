@@ -21,16 +21,15 @@ public class SnakeBody : MonoBehaviour
 		DrawBody();
 	}
 
-	//bug: body will struggle to follow head with fast speed;
 	public void DrawBody()
 	{
 		//Get distance between the head and the first part
 		float dist = Vector2.Distance((Vector2)head.position, partPos[0]);
-		//If distance far enough from spacing
-		if(dist > spacing)
+		//While distance still bigger than spacing
+		while (dist > spacing)
 		{
 			//Get the direction from the first part to head
-			Vector2 dir = ((Vector2)head.position - partPos[0]);
+			Vector2 dir = ((Vector2)head.position - partPos[0]).normalized;
 			//Insert position from the first toward direction using spacing
 			partPos.Insert(0, partPos[0] + dir * spacing);
 			//Remove the old first part

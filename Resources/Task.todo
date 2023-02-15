@@ -9,7 +9,7 @@ Gameplay:
 			✓ Longer and wider scale with max health.
 			✓ Hitbox the whole body.
 	Rebirth:
-		▪ Eating it own tails
+		✓ Eating it own tails
 		▪ Convert max health:
 			▪ Gain money.
 			▪ Gain score.
@@ -57,4 +57,5 @@ Gameplay:
 			▪ Bomb - Randomly drop that explode.
 
 Bugs:
-	▪ 02-15: Body will struggle to follow head with fast speed. 
+	✓ 02-15: Body will struggle to follow head with fast speed. @caution
+		Temporary fix but still buggy at high speed
