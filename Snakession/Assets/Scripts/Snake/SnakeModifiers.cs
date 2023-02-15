@@ -5,7 +5,7 @@ public class SnakeModifiers : MonoBehaviour
 	public FoodAdditional foodAdditional; [System.Serializable] public class FoodAdditional
 	{
    		public int food, vegan, meat;
-		public int EatAdditional( bool isVegan)
+		public int GetAdditional( bool isVegan)
 		{
 			//Gain additional amount 
 			int additional = food;
@@ -19,7 +19,7 @@ public class SnakeModifiers : MonoBehaviour
 	public FoodIncrease foodIncrease; [System.Serializable] public class FoodIncrease
 	{
 		public int food, vegan, meat;
-		public int EatIncrease(int amount, bool isVegan)
+		public int GetIncrease(int amount, bool isVegan)
 		{
 			//Increase amount got eat
 			amount += (food/100) * amount;
@@ -28,5 +28,11 @@ public class SnakeModifiers : MonoBehaviour
 			//Return amount has increase
 			return amount;
 		}
+	}
+
+	public FreshAdditional freshAdditional; [System.Serializable] public class FreshAdditional
+	{
+   		public int leftime;
+		public int GetAdditional() {return leftime;}
 	}
 }

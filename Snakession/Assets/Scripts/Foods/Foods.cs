@@ -10,7 +10,7 @@ public class Foods : MonoBehaviour
 	void OnEnable()
 	{
 		//Automaticly pluck this food when it no longer fresh
-		Invoke("Pluck", fresh);
+		Invoke("Pluck", fresh + Snake.i.mod.freshAdditional.GetAdditional());
 	}
 
 	void OnCollisionEnter2D(Collision2D other) 
