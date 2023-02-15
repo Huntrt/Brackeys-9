@@ -28,9 +28,9 @@ public class Snake : MonoBehaviour
 	public void Eat(int amount, bool isVegan)
 	{
 		//Begin increase the amount gain from good
-		amount += mod.EatIncrease(amount, isVegan);
+		amount += mod.foodIncrease.EatIncrease(amount, isVegan);
 		//Begin gain additional amount from mod
-		amount += mod.EatAdditional(amount, isVegan);
+		amount += mod.foodAdditional.EatAdditional(isVegan);
 		//Grow with the amount has given
 		growing += amount;
 		//While has meet requirement to grow
