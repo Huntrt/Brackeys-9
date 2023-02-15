@@ -14,7 +14,15 @@ Gameplay:
 			▪ Gain money.
 			▪ Gain score.
 			▪ Scale score with level.
-			▪ Lose all max health
+			▪ Lose all max health.
+		▪ Setting up next level:
+			▪ New map.
+			▪ Clear all food and traps.
+			▪ Lose all max health gain.
+			▪ Reset position.
+			▪ Reset body.
+			▪ Place new trap.
+			▪ Begin new level.
 		▪ Upgrades: @doing
 			✓ Display to GUI
 			✓ Randomize Upgrade
@@ -43,6 +51,7 @@ Gameplay:
 	Traps:
 		✓ Randomly spawn.
 		X Spawn chance scale with difficulty. @consider
+		▪ Spawn rate increase by level.
 		✓ Trap unlock by level.
 		✓ Populated chance.
 			Chance to spread more from it spawn point
