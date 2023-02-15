@@ -32,7 +32,7 @@ public class SnakeModifiers : MonoBehaviour
 
 	public FreshAdditional freshAdditional; [System.Serializable] public class FreshAdditional
 	{
-   		public int leftime;
-		public int GetAdditional() {return leftime;}
+   		public int food;
+		public int GetAdditional() {return food;}
 	}
 }

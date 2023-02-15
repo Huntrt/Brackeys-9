@@ -2,6 +2,20 @@ using UnityEngine;
 
 public class FoodSpawner : MonoBehaviour
 {
+	#region Set this class to singleton
+	static FoodSpawner _i; public static FoodSpawner i
+	{
+		get
+		{
+			if(_i==null)
+			{
+				_i = GameObject.FindObjectOfType<FoodSpawner>();
+			}
+			return _i;
+		}
+	}
+	#endregion
+
 	public float spawnRate, spawnChance; float spawnRateTimer;
 	[SerializeField] WeightDrop[] foods;
 
