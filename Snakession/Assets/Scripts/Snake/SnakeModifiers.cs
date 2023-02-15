@@ -35,4 +35,10 @@ public class SnakeModifiers : MonoBehaviour
    		public int food;
 		public int GetAdditional() {return food;}
 	}
+
+	public FreshIncrease freshIncrease; [System.Serializable] public class FreshIncrease
+	{
+   		public float food;
+		public float GetIncrease(float amount) {return (food/100f) * amount;}
+	}
 }
