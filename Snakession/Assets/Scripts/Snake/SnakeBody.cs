@@ -22,6 +22,7 @@ public class SnakeBody : MonoBehaviour
 		DrawBody();
 	}
 
+	//bug: body will struggle to follow head with fast speed;
 	void DrawBody()
 	{
 		//Get distance between the head and the first part

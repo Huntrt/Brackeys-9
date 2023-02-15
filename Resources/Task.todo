@@ -55,3 +55,6 @@ Gameplay:
 			▪ Cutter - Strike in an circle shape ervery X sec.
 			▪ Flame - Rapidly deal damage and give snake an small speed boost.
 			▪ Bomb - Randomly drop that explode.
+
+Bugs:
+	▪ 02-15: Body will struggle to follow head with fast speed. 
