@@ -21,6 +21,8 @@ public class Snake : MonoBehaviour
 	public float growthEveryHealth;
 	float growing;
 	public SnakeBody body;
+	public SnakeTail tail;
+	public SnakeMovement movement;
 
 	public void Eat(int amount)
 	{

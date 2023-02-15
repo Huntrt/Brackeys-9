@@ -4,11 +4,11 @@ using UnityEngine;
 public class SnakeBody : MonoBehaviour
 {
 	[SerializeField] Snake snake;
-	public LineRenderer line;
-	public EdgeCollider2D[] bodyColliders;
-	[SerializeField] Transform head;
 	[SerializeField] float spacing;
-	List<Vector2> bodyPart = new List<Vector2>();
+	public LineRenderer line;
+	public Transform head;
+	public EdgeCollider2D[] bodyColliders;
+	[HideInInspector] public List<Vector2> bodyPart = new List<Vector2>();
 	List<Vector2> partPos = new List<Vector2>();
 
 	void Start()
