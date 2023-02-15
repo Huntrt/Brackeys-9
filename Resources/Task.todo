@@ -8,20 +8,18 @@ Gameplay:
 			✓ Take damage.
 			✓ Longer and wider scale with max health.
 			✓ Hitbox the whole body.
-	Rebirth:
+	Succession:
 		✓ Eating it own tails
-		▪ Convert max health:
+		▪ Convert max health: @doing
 			▪ Gain money.
 			▪ Gain score.
 			▪ Scale score with level.
-			▪ Lose all max halth
-		▪ Upgrades:
-			▪ Agility = + Move faster - Lose max health
-			▪ Digest = + More max health when eat food - Size increase lower
-			▪ Stretch = + Get longer faster
-			▪ Harvest = + More food - Food disappear faster
-			▪ Fresh = + Food stay longer - Less food
-			▪ ... 
+			▪ Lose all max health
+		▪ Upgrades: @doing
+			✓ Display to GUI
+			✓ Randomize Upgrade
+			▪ Lose money when buy
+			✓ Types ...
 		▪ Go to an new map.
 	Map:
 		✓ Grid base.
@@ -44,7 +42,7 @@ Gameplay:
 			▪ Salad - Heal 20% hp.
 	Traps:
 		✓ Randomly spawn.
-		▪ Spawn chance scale with difficulty. @consider
+		X Spawn chance scale with difficulty. @consider
 		✓ Trap unlock by level.
 		✓ Populated chance.
 			Chance to spread more from it spawn point
