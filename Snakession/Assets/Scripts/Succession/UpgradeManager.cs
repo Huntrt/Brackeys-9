@@ -6,11 +6,10 @@ public class UpgradeManager : MonoBehaviour
 {
 	[SerializeField] UpgradeCatalog catalog;
 	[SerializeField] UpgradeInfo[] upgradeInfos;
-
     [SerializeField] PanelGUI[] panels;
 	[System.Serializable] class PanelGUI
 	{
-		public TextMeshProUGUI nameText, descText, costText;
+		public TextMeshProUGUI costText, nameText, descText;
 		public Image iconImg;
 		public Button upgradeButton;
 	}
