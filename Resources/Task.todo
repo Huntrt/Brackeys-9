@@ -57,8 +57,10 @@ Gameplay:
 			▪ Bomb - Randomly drop that explode.
 
 Bugs:
-	✓ 02-15: Body will struggle to follow head with fast speed.
-		X Temporary fix but still buggy at high speed
+	✓ 02-15: Body will struggle to follow head with fast speed. @caution
 		✓ Solution:
 			✓ While loop until distance smaller than spacing allow
 			✓ Use late update
+	✓ 02-15: Head rotation will be buddy when rotate speed >70 while mouse in middle. @minimal
+		✓ Solution:
+			✓ Hard cap rotate speed at 50

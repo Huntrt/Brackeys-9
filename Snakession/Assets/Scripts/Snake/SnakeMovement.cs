@@ -28,8 +28,10 @@ public class SnakeMovement : MonoBehaviour
 			//Stop moving
 			return;
 		}
+		//Max rotate speed allow is 50
+		rotateSpeed = Mathf.Clamp(rotateSpeed, 0, 50);
 		//Make object slowly facing toward mouse position
-		head.up = Vector2.Lerp(head.up, (mousePos - rb.position).normalized, rotateSpeed * Time.deltaTime);
+		head.up = Vector2.Lerp(head.up, (mousePos - rb.position).normalized, rotateSpeed * Time.fixedDeltaTime);
 		//Get velocity by multiply speed with where object facing
 	  	Vector2 velocity = head.up * moveSpeed;
 		//Moving the player toward velocity has get
