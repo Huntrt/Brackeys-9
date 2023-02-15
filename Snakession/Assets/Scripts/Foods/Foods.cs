@@ -4,6 +4,7 @@ public class Foods : MonoBehaviour
 {
     public int feed;
 	public Vector2 spawnCoord;
+	public bool isVegan;
 
 	void OnCollisionEnter2D(Collision2D other) 
 	{
