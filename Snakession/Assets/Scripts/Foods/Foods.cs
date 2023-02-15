@@ -10,7 +10,7 @@ public class Foods : MonoBehaviour
 	{
 		if(other.collider.CompareTag("Player"))
 		{
-			Snake.i.Eat(feed);
+			Snake.i.Eat(feed, isVegan);
 			Consumed();
 		}
 	}
