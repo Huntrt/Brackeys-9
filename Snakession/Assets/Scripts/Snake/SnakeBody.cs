@@ -16,7 +16,7 @@ public class SnakeBody : MonoBehaviour
 		partPos.Add(head.position);
 	}
 
-	void FixedUpdate()
+	void LateUpdate()
 	{
 		DrawBody();
 	}

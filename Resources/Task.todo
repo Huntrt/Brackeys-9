@@ -57,5 +57,8 @@ Gameplay:
 			▪ Bomb - Randomly drop that explode.
 
 Bugs:
-	✓ 02-15: Body will struggle to follow head with fast speed. @caution
-		Temporary fix but still buggy at high speed
+	✓ 02-15: Body will struggle to follow head with fast speed.
+		X Temporary fix but still buggy at high speed
+		✓ Solution:
+			✓ While loop until distance smaller than spacing allow
+			✓ Use late update

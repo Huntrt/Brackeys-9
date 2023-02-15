@@ -6,7 +6,7 @@ public class SnakeTail : MonoBehaviour
 	public float maxHealthRequired;
 	[SerializeField] Transform tail;
 
-	void FixedUpdate()
+	void LateUpdate()
 	{
 		//If snake max health haven't meet requirement
 		if(snake.maxHealth < maxHealthRequired)

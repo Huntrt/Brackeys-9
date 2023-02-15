@@ -1699,7 +1699,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  rotateSpeed: 40
+  rotateSpeed: 100
   head: {fileID: 1820746345}
   rb: {fileID: 1820746348}
 --- !u!4 &2049876865
