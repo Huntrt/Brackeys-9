@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feed: 12
+  fresh: 10
+  spawnCoord: {x: 0, y: 0}
+  isVegan: 0
 --- !u!212 &5690730477230346822
 SpriteRenderer:
   m_ObjectHideFlags: 0
