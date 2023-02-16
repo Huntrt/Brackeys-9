@@ -22,7 +22,7 @@ public class SnakeBody : MonoBehaviour
 
 	void LateUpdate()
 	{
-		//Only drow body if part pos for mhead exist
+		//Only draw body if part pos for head exist
 		if(partPos.Count > 0) DrawBody();
 	}
 
@@ -44,11 +44,13 @@ public class SnakeBody : MonoBehaviour
 		}
 		//Array for body part's 3d position
 		Vector3[] bodyPart3d = new Vector3[bodyPart.Count];
+		//Set the frist body part to be head's position
+		if(bodyPart.Count > 0) {bodyPart[0] = head.position; bodyPart3d[0] = head.position;}
 		//Go through all the body part
-		for (int b = 0; b < bodyPart.Count; b++)
+		for (int b = 1; b < bodyPart.Count; b++)
 		{
-			//Lerping this part to it next part using progress of distance
-			bodyPart[b] = Vector2.Lerp(partPos[b+1], partPos[b], dist/spacing);
+			//Lerping this part to it previous part using progress of distance
+			bodyPart[b] = Vector2.Lerp(partPos[b], partPos[b-1], dist/spacing);
 			//Save this body part 3d position
 			bodyPart3d[b] = bodyPart[b];
 		}
