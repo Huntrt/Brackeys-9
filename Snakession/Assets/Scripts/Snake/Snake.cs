@@ -1,4 +1,6 @@
+using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class Snake : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class Snake : MonoBehaviour
 	}
 	#endregion
 
-    public float initalHealth, maxHealth, health;
+    public int initalHealth, maxHealth, health;
 	//Every X max health will grow
 	public float growthEveryHealth;
 	float growing;
@@ -24,6 +26,9 @@ public class Snake : MonoBehaviour
 	public SnakeTail tail;
 	public SnakeMovement movement;
 	public SnakeModifiers mod;
+	public SnakeMoney money;
+	public Image healthBar;
+	public TextMeshProUGUI healthText;
 
 	public void Eat(int amount, bool isVegan)
 	{
@@ -49,12 +54,14 @@ public class Snake : MonoBehaviour
 	{
 		health += amount;
 		health = Mathf.Clamp(health, 0, maxHealth);
+		UpdateHealthBar();
 	}
 
 	public void Hurt(int amount)
 	{
 		health -= amount;
 		if(health <= 0) Destroy(gameObject);
+		UpdateHealthBar();
 	}
 
 	public void ResetSnake()
@@ -66,7 +73,7 @@ public class Snake : MonoBehaviour
 		//Initial max health
 		maxHealth = initalHealth;
 		//Heal to full max health
-		health = maxHealth;
+		Heal(maxHealth);
 		//Disable snake movement
 		movement.enabled = false;
 	}
@@ -77,4 +84,13 @@ public class Snake : MonoBehaviour
 		movement.enabled = true;
 	}
 
+	void UpdateHealthBar()
+	{
+		//Stop if max health are 0
+		if(maxHealth == 0) return;
+		//Display health bar
+		healthBar.fillAmount = Mathf.Clamp01(health/maxHealth);
+		//Display health as text
+		healthText.text = health + "/" + maxHealth;
+	}
 }
