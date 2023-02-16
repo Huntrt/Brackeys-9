@@ -22,6 +22,7 @@ public class Snake : MonoBehaviour
 	//Every X max health will grow
 	public float growthEveryHealth;
 	float growing;
+	public int eatenEachSuccession;
 	public SnakeBody body;
 	public SnakeMovement movement;
 	public SnakeModifiers mod;
@@ -32,6 +33,8 @@ public class Snake : MonoBehaviour
 
 	public void Eat(int amount, bool isVegan)
 	{
+		//This sucessor has eat one more time
+		eatenEachSuccession++;
 		//Begin increase the amount gain from good
 		amount += mod.foodIncrease.GetIncrease(amount, isVegan);
 		//Begin gain additional amount from mod
@@ -68,6 +71,8 @@ public class Snake : MonoBehaviour
 	{
 		//Move head back to the center
 		body.head.transform.position = Vector3.zero;
+		//STtart an new eat count for this sucessor
+		eatenEachSuccession = 0;
 		//Reseting body part
 		body.ResetPart();
 		//Initial max health
