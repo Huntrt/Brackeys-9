@@ -9,13 +9,13 @@ public class SnakeBody : MonoBehaviour
 	[SerializeField] Transform tail;
 	public float growNeedForTail;
 	public EdgeCollider2D[] bodyColliders;
-	[SerializeField] public List<Vector2> bodyPart = new List<Vector2>();
-	List<Vector2> partPos = new List<Vector2>();
+	public List<Vector2> bodyPart = new List<Vector2>();
+	[SerializeField] List<Vector2> partPos = new List<Vector2>();
 
 	public void ResetPart()
 	{
-		//Clear all the body part
-		bodyPart.Clear(); partPos.Clear();
+		//Renew all the body part
+		bodyPart = new List<Vector2>(); partPos = new List<Vector2>();
 		//Remove all line position
 		line.positionCount = 0;
 		//Deactive the tail when reset

@@ -3874,9 +3874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604a03fc9d070104988de93a2a0a7f02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snake: {fileID: 2049876868}
-  maxHealthRequired: 50
-  tail: {fileID: 783826421}
 --- !u!114 &2049876862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3981,6 +3978,8 @@ MonoBehaviour:
   spacing: 0.2
   line: {fileID: 1551173249}
   head: {fileID: 1820746345}
+  tail: {fileID: 783826421}
+  growNeedForTail: 5
   bodyColliders:
   - {fileID: 992000025}
   - {fileID: 992000027}
@@ -4002,7 +4001,6 @@ MonoBehaviour:
   health: 0
   growthEveryHealth: 5
   body: {fileID: 2049876867}
-  tail: {fileID: 2049876861}
   movement: {fileID: 2049876864}
   mod: {fileID: 2049876862}
   money: {fileID: 2049876863}
