@@ -26,5 +26,7 @@ public class SnakeScore : MonoBehaviour
 		gain += (((float)Map.i.level*levelPercentIncrease)/100) * gain;
 		//Gaind score
 		score += (int)gain;
+		//Display score text
+		scoreText.text = "SCORE: " + score;
 	}
 }
