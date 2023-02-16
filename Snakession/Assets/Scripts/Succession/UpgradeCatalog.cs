@@ -30,7 +30,7 @@ public class UpgradeCatalog : MonoBehaviour
 	void BiggerHeadUpgrading() 
 	{
 		//* Increase initial max health
-		snake.maxHealth += 2;
+		snake.initalHealth += 2;
 		//? Bigger head
 		snake.body.head.localScale += (5f/100f) * snake.body.head.localScale;
 	}
