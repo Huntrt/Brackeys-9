@@ -27,6 +27,7 @@ public class Snake : MonoBehaviour
 	public SnakeMovement movement;
 	public SnakeModifiers mod;
 	public SnakeMoney money;
+	public SnakeScore score;
 	public Image healthBar;
 	public TextMeshProUGUI healthText;
 
