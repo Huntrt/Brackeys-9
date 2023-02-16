@@ -16,7 +16,7 @@ public class Snake : MonoBehaviour
 	}
 	#endregion
 
-    public float maxHealth, health;
+    public float initalHealth, maxHealth, health;
 	//Every X max health will grow
 	public float growthEveryHealth;
 	float growing;
@@ -56,4 +56,25 @@ public class Snake : MonoBehaviour
 		health -= amount;
 		if(health <= 0) Destroy(gameObject);
 	}
+
+	public void ResetSnake()
+	{
+		//Move head back to the center
+		body.head.transform.position = Vector3.zero;
+		//Reseting body part
+		body.ResetPart();
+		//Initial max health
+		maxHealth = initalHealth;
+		//Heal to full max health
+		health = maxHealth;
+		//Disable snake movement
+		movement.enabled = false;
+	}
+
+	public void ReleaseSnake()
+	{
+		//Enable snake movement
+		movement.enabled = true;
+	}
+
 }
