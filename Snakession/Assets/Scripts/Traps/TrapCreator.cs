@@ -84,8 +84,12 @@ public class TrapCreator : MonoBehaviour
 		yield return null;
 		//Stop if has reached populated limit
 		if(populatedCount > trap.populateLimit) yield break;
-		//Place the given trap onto given coordinate at map but stop if unable to
-		if(Map.i.PlaceObject(coord, trap.obj) == null) yield break;
+		//Place the given trap onto given coordinate at map 
+		GameObject placed = Map.i.PlaceObject(coord, trap.obj);
+		//Stop if unable to place trap
+		if(placed == null) yield break;
+		//Group the trap just got place
+		placed.transform.SetParent(Map.i.trapGroup);
 		//Create an an list of 4 avail direction to populate
 		List<int> aDir = new List<int>(){0,1,2,3};
 		//Go through all available direction in revert
