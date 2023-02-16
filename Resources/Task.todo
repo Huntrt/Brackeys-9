@@ -11,10 +11,10 @@ Gameplay:
 	Succession:
 		✓ Eating it own tails
 		▪ Convert max health: @doing
-			▪ Gain money.
+			✓ Gain money.
 			▪ Gain score.
 			▪ Scale score with level.
-			▪ Lose all max health.
+			✓ Lose all max health.
 		✓ Setting up next level:
 			✓ New map.
 			✓ Clear all food and traps.
@@ -23,12 +23,12 @@ Gameplay:
 			✓ Reset body.
 			✓ Place new trap.
 			✓ Begin new level.
-		▪ Upgrades: @next
+		✓ Upgrades: @next
 			✓ Display to GUI
 			✓ Randomize Upgrade
-			▪ Lose money when buy
+			✓ Lose money when buy
 			✓ Types ...
-		▪ Go to an new map.
+		✓ Go to an new map.
 	Map:
 		✓ Grid base.
 		✓ Access each grid.
