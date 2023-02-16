@@ -7,7 +7,7 @@ public class SnakeBody : MonoBehaviour
 	public LineRenderer line;
 	public Transform head;
 	[SerializeField] Transform tail;
-	public float growNeedForTail;
+	public float eatNeedForTail;
 	public EdgeCollider2D[] bodyColliders;
 	public List<Vector2> bodyPart = new List<Vector2>();
 	[SerializeField] List<Vector2> partPos = new List<Vector2>();
@@ -63,8 +63,8 @@ public class SnakeBody : MonoBehaviour
 		//Set points for both trigger and collision collider
 		bodyColliders[0].SetPoints(bodyPart);
 		bodyColliders[1].SetPoints(bodyPart);
-		//Tail begin follwing the last body part if it long enough
-		if(bodyPart.Count >= growNeedForTail) tail.position = bodyPart[bodyPart.Count-1];
+		//Tail begin follwing the last body part if it has eat enough
+		if(Snake.i.eatenEachSuccession >= eatNeedForTail) tail.position = bodyPart[bodyPart.Count-1];
 	}
 
 	public void Grow()
@@ -74,8 +74,8 @@ public class SnakeBody : MonoBehaviour
 		partPos.Add(partPos[partPos.Count-1]);
 		//Set line position the same as body part count
 		line.positionCount = bodyPart.Count;
-		//Active the tail when body grow long enough
-		tail.gameObject.SetActive(bodyPart.Count >= growNeedForTail);
+		//Active the tail when eat enough
+		tail.gameObject.SetActive(Snake.i.eatenEachSuccession >= eatNeedForTail);
 		//Draw body instantly after grow
 		DrawBody();
 	}
