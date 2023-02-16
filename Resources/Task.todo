@@ -10,10 +10,10 @@ Gameplay:
 			✓ Hitbox the whole body.
 	Succession:
 		✓ Eating it own tails
-		▪ Convert max health: @doing
+		✓ Convert max health:
 			✓ Gain money.
-			▪ Gain score.
-			▪ Scale score with level.
+			✓ Gain score.
+			✓ Scale score with level.
 			✓ Lose all max health.
 		✓ Setting up next level:
 			✓ New map.
@@ -62,6 +62,8 @@ Gameplay:
 			▪ Cutter - Strike in an circle shape ervery X sec.
 			▪ Flame - Rapidly deal damage and give snake an small speed boost.
 			▪ Bomb - Randomly drop that explode.
+	Status Effect:
+		▪ De/Increase snake movement speed for X duration
 
 Bugs:
 	✓ 02-15: Body will struggle to follow head with fast speed. @caution
