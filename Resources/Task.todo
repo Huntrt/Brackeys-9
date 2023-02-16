@@ -41,7 +41,7 @@ Gameplay:
 		✓ Randomly spawn.
 		✓ All food will give max hp.
 		▪ Effects:
-			▪ Increase max hp
+			✓ Increase max hp
 			▪ Heal 
 			▪ Increase speed for set duration
 	Traps:
@@ -59,6 +59,12 @@ Gameplay:
 			▪ Flame - Rapidly deal damage and give snake an small speed boost.
 			▪ Bomb - Randomly drop that explode.
 			▪ Turret - shoot bullet in an direction
+	Effects:
+		▪ Popup:
+			▪ When gain max health.
+			▪ When heal.
+			▪ When got speed effect.
+			▪ When hurt.
 Menu:
 	▪ Start game.
 	▪ Pause game.
