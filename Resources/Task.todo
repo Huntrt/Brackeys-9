@@ -65,6 +65,20 @@ Gameplay:
 	Status Effect:
 		▪ De/Increase snake movement speed for X duration
 
+Menu:
+	▪ Start game.
+	▪ Pause game.
+	▪ Settings:
+		▪ Mouse or keyboard control option. @consider
+		▪ Keyboard control keybinds. @consider
+		▪ Volume slider.
+		▪ Display option.
+		▪ Mouse sensitivity. @consider
+	▪ Customize: @consider
+		▪ Snake color
+		▪ Snake skin pattern
+
+
 Bugs:
 	✓ 02-15: Body will struggle to follow head with fast speed. @caution
 		✓ Solution:
