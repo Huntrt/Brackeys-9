@@ -19,20 +19,45 @@ public class Map : MonoBehaviour
 	}
 	#endregion
 	
-	public UnityEvent onMapCreate;
+	[SerializeField] WeightDrop[] mapTypes;
+	public Transform currentMap, foodGroup, trapGroup;
+	public LayerMask mapLayer;
+	[SerializeField] PlotSettings plotSettings;
 	public List<PlotData> emptyPlots = new List<PlotData>();
 	public List<PlotData> filledPlots = new List<PlotData>();
-	public LayerMask mapLayer;
+	public UnityEvent onMapCreate, onMapClear;
 
-	void Start()
+	void Update()
 	{
-		CreateMap(); //temp: create map at start for now
+		//temp: reset map using hotkeys
+		if(Input.GetKeyDown(KeyCode.M))
+		{
+			ClearMap();
+			CreateMap();
+		}
+	}
+
+	void ClearMap()
+	{
+		//Destroy all of the food that get group
+		for (int c = foodGroup.childCount - 1; c >= 0 ; c--) Destroy(foodGroup.GetChild(c).gameObject);
+		//Destroy all of the trap that get group
+		for (int c = trapGroup.childCount - 1; c >= 0 ; c--) Destroy(trapGroup.GetChild(c).gameObject);
+		//Clear all the plot
+		emptyPlots.Clear(); filledPlots.Clear();
+		//Destroy the current map if it exist
+		if(currentMap != null) Destroy(currentMap.gameObject);
+		//Map has been clear
+		onMapClear.Invoke();
 	}
 
 	void CreateMap()
 	{
-		//Generate plot from settings
+		//Create new current weighted map
+		currentMap = Instantiate(WeightSystem.Weighting(mapTypes).obj).transform;
+		//Generate new plot
 		emptyPlots = plotSettings.GeneratePlot();
+		//Map has been created
 		onMapCreate.Invoke();
 	}
 
@@ -90,7 +115,7 @@ public class Map : MonoBehaviour
 		}
 	}
 
-	[SerializeField] PlotSettings plotSettings; [System.Serializable] public class PlotSettings
+	[System.Serializable] public class PlotSettings
 	{
 		[SerializeField] Vector2 origin;
 		[SerializeField] float spacing;
