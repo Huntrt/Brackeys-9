@@ -10,12 +10,12 @@ Gameplay:
 			✓ Hitbox the whole body.
 	Succession:
 		✓ Eating it own tails
-		▪ Convert max health: @doing
+		▪ Convert max health:
 			▪ Gain money.
 			▪ Gain score.
 			▪ Scale score with level.
 			▪ Lose all max health.
-		▪ Setting up next level:
+		▪ Setting up next level: @doing
 			▪ New map.
 			▪ Clear all food and traps.
 			▪ Lose all max health gain.
