@@ -18,17 +18,18 @@ public class SnakeModifiers : MonoBehaviour
 	
 	public FoodIncrease foodIncrease; [System.Serializable] public class FoodIncrease
 	{
-		public int food, vegan, meat;
+		public float food, vegan, meat;
+
 		public int GetIncrease(int amount, bool isVegan)
 		{
-			//Save amount for vegan
-			int vAmount = amount;
-			//Increase amount got eat
-			amount += (food/100) * amount;
-			//Increase amount depends of food eated are vegan or meat
-			if(isVegan) vAmount += (vegan/100) * vAmount; else vAmount += (meat/100) * vAmount;
-			//Return both amount
-			return amount + vAmount;
+			//Get the amount got increase
+			float Increased = (food/100f) * amount;
+			//This increase use for vegan/meat
+			float vIncreased = 0;
+			//Get increase of given amount depends of food eated are vegan or meat
+			if(isVegan) vIncreased += (vegan/100f) * amount; else vIncreased += (meat/100f) * amount;
+			//Return both increase as int
+			return (int)(Increased + vIncreased);
 		}
 	}
 
