@@ -8,6 +8,7 @@ Gameplay:
 			✓ Take damage.
 			✓ Longer and wider scale with max health.
 			✓ Hitbox the whole body.
+			▪ Slowly heal instead of instant when eat.
 	Succession:
 		✓ Eating it own tails
 		✓ Convert max health:
@@ -39,15 +40,10 @@ Gameplay:
 	Foods:
 		✓ Randomly spawn.
 		✓ All food will give max hp.
-		▪ Types:
-			▪ Apple - Extra 2 max hp.
-			▪ Cherry - Heal 2.
-			▪ Potato - 50% to reappear.
-			▪ Chilly - Take 1 damage then gain 35% movement speed for 5 sec.
-			▪ Watermelon - Extras 20 max hp but lose 80 movement speed for 3 sec.
-			▪ Corn - Randomly spawn 5 to 10 kernel.
-			▪ Kernel - Gain 1 max hp.
-			▪ Salad - Heal 20% hp.
+		▪ Effects:
+			▪ Increase max hp
+			▪ Heal 
+			▪ Increase speed for set duration
 	Traps:
 		✓ Randomly spawn.
 		X Spawn chance scale with difficulty. @consider
@@ -57,14 +53,12 @@ Gameplay:
 			Chance to spread more from it spawn point
 		▪ Types:
 			▪ Spike - Deal damage once when stepped on.
-			▪ Puddle - Slow down movement.
+			▪ Puddle - Slow down movement when stand on.
 			▪ Mine - Explode upon step or X time then disappear.
 			▪ Cutter - Strike in an circle shape ervery X sec.
 			▪ Flame - Rapidly deal damage and give snake an small speed boost.
 			▪ Bomb - Randomly drop that explode.
-	Status Effect:
-		▪ De/Increase snake movement speed for X duration
-
+			▪ Turret - shoot bullet in an direction
 Menu:
 	▪ Start game.
 	▪ Pause game.
