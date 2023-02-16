@@ -21,12 +21,14 @@ public class SnakeModifiers : MonoBehaviour
 		public int food, vegan, meat;
 		public int GetIncrease(int amount, bool isVegan)
 		{
+			//Save amount for vegan
+			int vAmount = amount;
 			//Increase amount got eat
 			amount += (food/100) * amount;
 			//Increase amount depends of food eated are vegan or meat
-			if(isVegan) amount += (vegan/100) * amount; else amount += (meat/100) * amount;
-			//Return amount has increase
-			return amount;
+			if(isVegan) vAmount += (vegan/100) * vAmount; else vAmount += (meat/100) * vAmount;
+			//Return both amount
+			return amount + vAmount;
 		}
 	}
 
