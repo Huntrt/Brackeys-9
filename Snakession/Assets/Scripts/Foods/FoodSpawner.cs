@@ -21,7 +21,8 @@ public class FoodSpawner : MonoBehaviour
 
     void Update()
     {
-        SpawningFood();
+		//Only spawn food if current map is not null
+        if(Map.i.currentMap != null) {SpawningFood();}
     }
 
 	void SpawningFood()
@@ -51,6 +52,8 @@ public class FoodSpawner : MonoBehaviour
 		//If successfully spawn food
 		if(spawn != null)
 		{
+			//Group food just spawned
+			spawn.transform.SetParent(Map.i.foodGroup);
 			//Set the object has been spawn's spawn coordinate
 			spawn.GetComponent<Foods>().spawnCoord = coord;
 		}
