@@ -21,6 +21,8 @@ public class SuccessionManager : MonoBehaviour
 	
 	public void BeginSuccession()
 	{
+		//Gain money from snake max health
+		Snake.i.money.EarningMaxHealth();
 		//Clear the map
 		Map.i.ClearMap();
 		//Refresh the upgrade
