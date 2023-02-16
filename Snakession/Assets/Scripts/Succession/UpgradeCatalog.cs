@@ -47,7 +47,9 @@ public class UpgradeCatalog : MonoBehaviour
 		//* Increase initial max health
 		snake.initalHealth += 2;
 		//? Bigger head
-		snake.body.head.localScale += (5f/100f) * snake.body.head.localScale;
+		//Increase size only in the X Y axis
+		Vector3 up = new Vector3(snake.body.head.localScale.x, snake.body.head.localScale.y, 0);
+		snake.body.head.localScale += ((5f/100f) * up);
 	}
 	void DigestUpgrading()
 	{
