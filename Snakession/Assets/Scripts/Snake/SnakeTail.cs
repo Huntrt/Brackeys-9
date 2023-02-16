@@ -25,7 +25,6 @@ public class SnakeTail : MonoBehaviour
 
 	public void EatingTail()
 	{
-		//Begin succession 
-		print("Succession...");
+		SuccessionManager.i.BeginSuccession();
 	}
 }

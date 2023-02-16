@@ -14,7 +14,7 @@ public class UpgradeManager : MonoBehaviour
 		public Button upgradeButton;
 	}
 
-	void Start()
+	public void RefreshUpgrade()
 	{
 		//Go through all the panel
 		for (int p = 0; p < panels.Length; p++)
@@ -31,7 +31,7 @@ public class UpgradeManager : MonoBehaviour
 		}
 	}
 
-    public UpgradeInfo Weighting()
+    UpgradeInfo Weighting()
 	{
 		//Get the total sum of all drops's weight
 		float sum = 0; for (int d = 0; d < upgradeInfos.Length; d++)

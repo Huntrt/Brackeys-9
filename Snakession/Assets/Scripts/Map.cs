@@ -19,6 +19,7 @@ public class Map : MonoBehaviour
 	}
 	#endregion
 	
+	public int level;
 	[SerializeField] WeightDrop[] mapTypes;
 	public Transform currentMap, foodGroup, trapGroup;
 	public LayerMask mapLayer;
@@ -27,17 +28,13 @@ public class Map : MonoBehaviour
 	public List<PlotData> filledPlots = new List<PlotData>();
 	public UnityEvent onMapCreate, onMapClear;
 
-	void Update()
+	void Start()
 	{
-		//temp: reset map using hotkeys
-		if(Input.GetKeyDown(KeyCode.M))
-		{
-			ClearMap();
-			CreateMap();
-		}
+		ClearMap();
+		CreateMap();
 	}
 
-	void ClearMap()
+	public void ClearMap()
 	{
 		//Destroy all of the food that get group
 		for (int c = foodGroup.childCount - 1; c >= 0 ; c--) Destroy(foodGroup.GetChild(c).gameObject);
@@ -51,7 +48,7 @@ public class Map : MonoBehaviour
 		onMapClear.Invoke();
 	}
 
-	void CreateMap()
+	public void CreateMap()
 	{
 		//Create new current weighted map
 		currentMap = Instantiate(WeightSystem.Weighting(mapTypes).obj).transform;

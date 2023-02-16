@@ -15,14 +15,14 @@ Gameplay:
 			▪ Gain score.
 			▪ Scale score with level.
 			▪ Lose all max health.
-		▪ Setting up next level:
+		✓ Setting up next level:
 			✓ New map.
 			✓ Clear all food and traps.
 			✓ Lose all max health gain.
 			✓ Reset position.
 			✓ Reset body.
 			✓ Place new trap.
-			▪ Begin new level.
+			✓ Begin new level.
 		▪ Upgrades: @next
 			✓ Display to GUI
 			✓ Randomize Upgrade

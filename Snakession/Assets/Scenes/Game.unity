@@ -939,7 +939,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 664974843}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1961077264}
+        m_TargetAssemblyTypeName: SuccessionManager, Assembly-CSharp
+        m_MethodName: EndSuccession
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &664974843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2167,6 +2179,7 @@ Transform:
   - {fileID: 268153481}
   - {fileID: 706146558}
   - {fileID: 613439844}
+  - {fileID: 1961077263}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2695,7 +2708,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1833082136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1961077264}
+        m_TargetAssemblyTypeName: SuccessionManager, Assembly-CSharp
+        m_MethodName: EndSuccession
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1833082136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2763,6 +2788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352345d0ca1632c478c25e98fad5fdd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
   mapTypes:
   - obj: {fileID: 7524652519691772467, guid: 3ee87f7bfea0c044fa3742b5698dfad0, type: 3}
     weight: 20
@@ -3111,6 +3137,51 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &1961077262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1961077263}
+  - component: {fileID: 1961077264}
+  m_Layer: 0
+  m_Name: Succession
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1961077263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961077262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1694255196}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1961077264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961077262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8794309842236494c9db82ed67194cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  successionPanel: {fileID: 1317793491}
+  upgradeManager: {fileID: 613439846}
 --- !u!1 &1966751264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3234,7 +3305,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1966751266}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1961077264}
+        m_TargetAssemblyTypeName: SuccessionManager, Assembly-CSharp
+        m_MethodName: EndSuccession
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2049876860
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,7 +3391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
-  rotateSpeed: 50
+  rotateSpeed: 7
   head: {fileID: 1820746345}
   rb: {fileID: 1820746348}
 --- !u!4 &2049876865
