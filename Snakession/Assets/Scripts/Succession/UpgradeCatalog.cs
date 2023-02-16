@@ -9,8 +9,23 @@ public class UpgradeCatalog : MonoBehaviour
 
 	Snake snake; void Start() {snake = Snake.i;}
 
-	//USe upgrade relied on string to invoke correct function
-	public void UseUpgrade(Upgrades upgrade) {Invoke(upgrade + "Upgrading", 0);}
+	public void UseUpgrade(UpgradeInfo info) 
+	{
+		//If able to spend for the given upgrade cost
+		if(Snake.i.money.Spend(info.cost))
+		{
+			//Upgrading given upgrade
+			Invoke(info.upgrade + "Upgrading", 0);
+			//Succession is over
+			SuccessionManager.i.EndSuccession();
+		}
+		//If out of money
+		else
+		{
+			//temp: Print out of money message
+			print("You are out of money");
+		}
+	}
 
 	void HasteUpgrading() 
 	{
