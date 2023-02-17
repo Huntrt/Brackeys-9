@@ -8,7 +8,7 @@ Gameplay:
 			✓ Take damage.
 			✓ Longer and wider scale with max health.
 			✓ Hitbox the whole body.
-			▪ Slowly heal instead of instant when eat.
+			▪ Slowly heal instead of instant when eat. @consider
 	Succession:
 		✓ Eating it own tails
 		✓ Convert max health:
@@ -24,7 +24,7 @@ Gameplay:
 			✓ Reset body.
 			✓ Place new trap.
 			✓ Begin new level.
-		✓ Upgrades: @next
+		✓ Upgrades: 
 			✓ Display to GUI
 			✓ Randomize Upgrade
 			✓ Lose money when buy
@@ -33,11 +33,13 @@ Gameplay:
 	Map:
 		✓ Grid base.
 		✓ Access each grid.
-		▪ Random rotation when object spawn.
-		▪ Types: @next
-			▪ Square.
-			▪ Plus.
-			▪ Diamond.
+		▪ Random rotation when object spawn. @doing
+		▪ Types:
+			✓ Square.
+			✓ Plus.
+			✓ Diamond.
+			▪ Multi. @consider
+			▪ Cross. @consider
 	Foods:
 		✓ Randomly spawn.
 		✓ All food will give max hp.
@@ -61,7 +63,7 @@ Gameplay:
 			✓ Cutter - Strike in an circle shape ervery X sec.
 			✓ Flame - Rapidly deal damage and give snake an small speed boost.
 			✓ Bomb - Randomly drop that explode.
-			▪ Turret - shoot bullet in an direction
+			▪ Turret - shoot bullet in an direction @consider
 	Effects:
 		▪ Popup:
 			▪ When gain max health.
