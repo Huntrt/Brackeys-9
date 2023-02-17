@@ -3,7 +3,6 @@ using UnityEngine;
 public class Trap_Spike : MonoBehaviour
 {
 	public int damage;
-	[SerializeField] Collider2D trapCollider;
 	Snake snake;
 	bool collidedWithSnake;
 
