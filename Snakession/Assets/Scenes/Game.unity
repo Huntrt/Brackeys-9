@@ -3734,7 +3734,7 @@ MonoBehaviour:
   - obj: {fileID: 7524652519691772467, guid: 3ee87f7bfea0c044fa3742b5698dfad0, type: 3}
     weight: 20
     requirement: 0
-  - obj: {fileID: 7524652519691772467, guid: 3ee87f7bfea0c044fa3742b5698dfad0, type: 3}
+  - obj: {fileID: 1507085649210577698, guid: e9cc3a0b2b369af4fb9f15c1a183b3d7, type: 3}
     weight: 20
     requirement: 0
   - obj: {fileID: 3822034965819690843, guid: 0bb4c299a828523438ea6a1f4a75108e, type: 3}
@@ -3749,7 +3749,7 @@ MonoBehaviour:
   plotSettings:
     origin: {x: 0, y: 0}
     spacing: 0.25
-    size: {x: 30, y: 20}
+    size: {x: 100, y: 100}
   emptyPlots: []
   filledPlots: []
   onMapCreate:
