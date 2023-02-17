@@ -6,6 +6,7 @@ public class Food : MonoBehaviour
     public int feed;
 	public float fresh;
 	[HideInInspector] public Vector2 spawnCoord;
+	public System.Action onConsume;
 
 	void OnEnable()
 	{
@@ -24,13 +25,11 @@ public class Food : MonoBehaviour
 			//Snake eat this food
 			Snake.i.Eat(feed, isVegan);
 			//Food has been consumed
-			Consumed();
+			onConsume?.Invoke();
 			//Pluck the food
 			Pluck();
 		}
 	}
-
-	protected virtual void Consumed() {}
 
 	protected virtual void Pluck()
 	{
