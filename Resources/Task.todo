@@ -104,3 +104,7 @@ Bugs:
 	▪ 02-17: Slowing down trap effect dont affect that much. @minimal @consider
 		▪ Solution:
 			▪ Apply all the speed boost then apply the slow?
+	▪ 02-17: Massive amount of plot could lag loading time (>500x500). @caution
+		▪ Solution:
+			▪ A. Limit map size
+			▪ B. Replace plot with snap system.
