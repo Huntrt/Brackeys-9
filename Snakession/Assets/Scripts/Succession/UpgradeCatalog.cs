@@ -61,12 +61,12 @@ public class UpgradeCatalog : MonoBehaviour
 		//* Gain food lifetime
 		snake.mod.freshBonus.flex += 3;
 		//! Lose food spawn rate
-		FoodSpawner.i.spawnRate -= (5f/100f) * FoodSpawner.i.spawnRate;
+		FoodsSpawner.i.spawnRate -= (5f/100f) * FoodsSpawner.i.spawnRate;
 	}
 	void FertilizerUpgrading()
 	{
 		//* Gain food spawn rate
-		FoodSpawner.i.spawnRate += (10f/100f) * FoodSpawner.i.spawnRate;
+		FoodsSpawner.i.spawnRate += (10f/100f) * FoodsSpawner.i.spawnRate;
 		//! Lost food lifetime
 		snake.mod.freshAdditive.flex -= 2;
 	}

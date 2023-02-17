@@ -1,15 +1,15 @@
 using UnityEngine;
 
-public class FoodSpawner : MonoBehaviour
+public class FoodsSpawner : MonoBehaviour
 {
 	#region Set this class to singleton
-	static FoodSpawner _i; public static FoodSpawner i
+	static FoodsSpawner _i; public static FoodsSpawner i
 	{
 		get
 		{
 			if(_i==null)
 			{
-				_i = GameObject.FindObjectOfType<FoodSpawner>();
+				_i = GameObject.FindObjectOfType<FoodsSpawner>();
 			}
 			return _i;
 		}
@@ -55,7 +55,7 @@ public class FoodSpawner : MonoBehaviour
 			//Group food just spawned
 			spawn.transform.SetParent(Map.i.foodGroup);
 			//Set the object has been spawn's spawn coordinate
-			spawn.GetComponent<Foods>().spawnCoord = coord;
+			spawn.GetComponent<Food>().spawnCoord = coord;
 		}
 	}
 }

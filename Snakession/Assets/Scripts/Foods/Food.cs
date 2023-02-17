@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Foods : MonoBehaviour
+public class Food : MonoBehaviour
 {
     public int feed;
 	public float fresh;
@@ -23,10 +23,14 @@ public class Foods : MonoBehaviour
 		{
 			//Snake eat this food
 			Snake.i.Eat(feed, isVegan);
+			//Food has been consumed
+			Consumed();
 			//Pluck the food
 			Pluck();
 		}
 	}
+
+	protected virtual void Consumed() {}
 
 	protected virtual void Pluck()
 	{
