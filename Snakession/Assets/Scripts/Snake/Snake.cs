@@ -39,6 +39,8 @@ public class Snake : MonoBehaviour
 		amount += mod.foodMaxHPAdditive.GetAdditive(amount, isVegan);
 		//Begin increase the bonus amount gain from mod
 		amount += mod.foodMaxHPBonus.GetBonus(isVegan);
+		//Increase max health than heal with given amount
+		maxHealth += amount; Heal(amount);
 		//Grow with the amount has given
 		growing += amount;
 		//While has meet requirement to grow
@@ -49,8 +51,6 @@ public class Snake : MonoBehaviour
 			//Decrease grow with requirement
 			growing -= growthEveryHealth;
 		}
-		//Increase max health than heal with given amount
-		maxHealth += amount; Heal(amount);
 	}
 
 	public void Heal(int amount)
