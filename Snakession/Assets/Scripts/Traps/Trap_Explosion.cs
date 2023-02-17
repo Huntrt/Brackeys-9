@@ -4,14 +4,18 @@ public class Trap_Explosion : MonoBehaviour
 {
 	public int damage;
 	public float radius;
-	[SerializeField] ParticleSystem explosionEffect;
+	[SerializeField] ParticleSystem[] explosionEffects;
 
 	public void Explode()
 	{
-		//Play the effect
-		explosionEffect.Play();
-		//Unparent the explosion effect
-		explosionEffect.transform.SetParent(null);
+		//Go through all the explosion effect
+		for (int e = 0; e < explosionEffects.Length; e++)
+		{
+			//Play this effect
+			explosionEffects[e].Play();
+			//Unparent this explosion effect
+			explosionEffects[e].transform.SetParent(null);
+		}
 		//Cast an circle in radius to check if explode hit anyting
 		RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, radius, Vector2.zero);
 		//Go through all the hit
