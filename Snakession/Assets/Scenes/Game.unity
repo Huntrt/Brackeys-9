@@ -698,14 +698,47 @@ MonoBehaviour:
   spawnChance: 10
   foods:
   - obj: {fileID: 1267683405549145456, guid: 88814255f0a5435489a45287227e4613, type: 3}
+    weight: 100
+    requirement: 0
+  - obj: {fileID: 7288531946462577248, guid: 5871e7c0fbd01fc4db9403871ebeda66, type: 3}
+    weight: 100
+    requirement: 0
+  - obj: {fileID: 7251523935581161808, guid: 7aec338406230684cb8def5038e81d63, type: 3}
+    weight: 70
+    requirement: 2
+  - obj: {fileID: 6292051739293853785, guid: 4cde1facea4205a4eb4c3b6fdff4d02b, type: 3}
+    weight: 60
+    requirement: 2
+  - obj: {fileID: 1147143286125993166, guid: f2115841dc332a341a0cbcee7de30854, type: 3}
+    weight: 60
+    requirement: 2
+  - obj: {fileID: 7665241965113865152, guid: 9b110e49fad05be4ab6c94cdb524b74c, type: 3}
+    weight: 55
+    requirement: 3
+  - obj: {fileID: 2634596695291445914, guid: 78498f9945834564fa6b0d5a38ba6e66, type: 3}
+    weight: 50
+    requirement: 5
+  - obj: {fileID: 5522326435334768882, guid: bad63287284f4d447b97b0d660403d2b, type: 3}
+    weight: 40
+    requirement: 5
+  - obj: {fileID: 1527673197471106773, guid: 487b8d6daaf3a6a41aa0f42da0e0752d, type: 3}
+    weight: 40
+    requirement: 5
+  - obj: {fileID: 5434536697793118502, guid: 4bdd29d0efccb094a83ded63eec77584, type: 3}
+    weight: 35
+    requirement: 8
+  - obj: {fileID: 5504895304219618227, guid: f87b1b365b889c44fb39f2e1cff3fa36, type: 3}
+    weight: 30
+    requirement: 8
+  - obj: {fileID: 3972796879986525902, guid: 5596de04ba2d9ad4f97e1a16f22a5b8d, type: 3}
+    weight: 20
+    requirement: 9
+  - obj: {fileID: 8872767635364534652, guid: 11aef81c2120e884baf2fcfad8c798bc, type: 3}
     weight: 10
-    requirement: 0
-  - obj: {fileID: 7235395662335736001, guid: 6b723246112d8374db04ff70734f6c95, type: 3}
-    weight: 10000000
-    requirement: 0
-  - obj: {fileID: 6796863062830401029, guid: 4cde1facea4205a4eb4c3b6fdff4d02b, type: 3}
+    requirement: 12
+  - obj: {fileID: 4945805022127435963, guid: 14f20bd1789193a4dbcebf5d3c472c85, type: 3}
     weight: 10
-    requirement: 0
+    requirement: 12
 --- !u!1 &372277651
 GameObject:
   m_ObjectHideFlags: 0
@@ -1712,15 +1745,25 @@ MonoBehaviour:
     chance: 100
     placeTraps:
     - obj: {fileID: 4974741918930583248, guid: 30dde1a8250441444a86289563d951d2, type: 3}
-      weight: 0
+      weight: 1
+      requirement: 0
+      populateChance: 10
+      populateLimit: 3
+    - obj: {fileID: 8320080238583217259, guid: 295bea9fb9cc6e74eb3555c8cd259dfe, type: 3}
+      weight: 1
       requirement: 0
       populateChance: 10
       populateLimit: 3
   spawner:
-    rate: 0
-    chance: 0
+    rate: 0.1
+    chance: 10
     rateTimer: 0
-    spawnTraps: []
+    spawnTraps:
+    - obj: {fileID: 6379504904974702719, guid: f44afd822fee6e04a8b37960ffe2f4a9, type: 3}
+      weight: 1
+      requirement: 0
+      populateChance: 0
+      populateLimit: 0
 --- !u!1 &783826420
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,7 +4351,7 @@ MonoBehaviour:
   line: {fileID: 1551173249}
   head: {fileID: 1820746345}
   tail: {fileID: 783826421}
-  eatNeedForTail: 5
+  maxHPNeedForTail: 50
   bodyColliders:
   - {fileID: 992000025}
   - {fileID: 992000027}
