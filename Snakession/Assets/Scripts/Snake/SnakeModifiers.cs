@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class SnakeModifiers : MonoBehaviour
@@ -32,5 +34,35 @@ public class SnakeModifiers : MonoBehaviour
 	{
    		public float flex;
 		public float GetAdditive(float amount) {return (flex/100f) * amount;}
+	}
+
+	[System.Serializable] public class BuffData 
+	{
+		public string source;
+		public float duration;
+		public float timer;
+
+		public BuffData(string source, float duration)
+		{
+			this.source = source;
+			this.duration = duration;
+		}
+
+		public bool BuffGoing()
+		{
+			//Counting timer 
+			timer += Time.deltaTime;
+			//If timer reached duration
+			if(timer >= duration)
+			{
+				//Buff has ended
+				return false;
+			}
+			else
+			{
+				//Buff still going
+				return true;
+			}
+		}
 	}
 }
