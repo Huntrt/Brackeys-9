@@ -41,10 +41,11 @@ Gameplay:
 	Foods:
 		✓ Randomly spawn.
 		✓ All food will give max hp.
-		✓ Ability:
+		▪ Ability:
 			✓ Increase max hp
 			✓ Heal 
 			✓ Increase speed for set duration
+			▪ Replicate itself
 	Traps:
 		✓ Randomly spawn.
 		X Spawn chance scale with difficulty. @consider

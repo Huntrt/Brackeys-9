@@ -48,7 +48,7 @@ public class FoodsSpawner : MonoBehaviour
 	public void DropFood(Vector2 coord)
 	{
 		//Spawn object at given coord on the map with the foods has been weighted
-		GameObject spawn = Map.i.PlaceObject(coord, WeightSystem.Weighting(foods).obj);
+		GameObject spawn = Map.i.PlaceObject(coord, WeightSystem.Weighting(foods, Map.i.level).obj);
 		//If successfully spawn food
 		if(spawn != null)
 		{
