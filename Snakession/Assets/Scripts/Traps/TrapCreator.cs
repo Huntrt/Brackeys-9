@@ -24,7 +24,8 @@ public class TrapCreator : MonoBehaviour
 
     void Update()
     {
-        SpawningTrap();
+		//Only spawn trap if map exist
+        if(Map.i.currentMap != null) SpawningTrap();
     }
 
 	public void PlacingTrap()
