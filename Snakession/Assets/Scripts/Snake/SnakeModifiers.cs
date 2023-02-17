@@ -36,6 +36,59 @@ public class SnakeModifiers : MonoBehaviour
 		public float GetAdditive(float amount) {return (flex/100f) * amount;}
 	}
 
+	public MoveSpeedBoost moveSpeedBoost; [System.Serializable] public class MoveSpeedBoost
+	{
+		[SerializeField] SnakeMovement movement;
+		[SerializeField] List<BoostData> boosts = new List<BoostData>();
+		[System.Serializable] class BoostData : BuffData
+		{
+			public float additive;
+
+			public BoostData(string source, float duration, float additive) : base(source, duration)
+			{
+				this.source = source;
+				this.duration = duration;
+				this.additive = additive;
+			}
+		}
+
+		public void AddBoost(float additive, float duration, string source)
+		{
+			//Go through all the boost buff to check if the source given are already boost
+			for (int b = 0; b < boosts.Count; b++) if(boosts[b].source == source)
+			{
+				//Renew this source buff timer if it already boosting
+				boosts[b].timer -= boosts[b].timer; return;
+			}
+			//Add an new booste buff with given source and duration
+			boosts.Add(new BoostData(source, duration, additive));
+		}
+
+		public void Boosting()
+		{
+			//The total additive of all boost
+			float totalAdditive = 0;
+			//Go through all the active boost
+			for (int b = 0; b < boosts.Count; b++)
+			{
+				//Save this boost
+				BoostData boost = boosts[b];
+				//If this boost still going
+				if(boost.BuffGoing())
+				{
+					//Save the additive of this buff
+					totalAdditive += boost.additive;
+				}
+				//Remove this boost if it ended
+				else boosts.RemoveAt(b);
+			}
+			//Boost initial move speed with all the additive
+			float additiveSpeed = (1*(totalAdditive/100f)) * movement.initialMoveSpeed;
+			//Apply additive speed to move speed
+			movement.moveSpeed = movement.initialMoveSpeed + additiveSpeed;
+		}
+	}
+
 	[System.Serializable] public class BuffData 
 	{
 		public string source;
@@ -64,5 +117,10 @@ public class SnakeModifiers : MonoBehaviour
 				return true;
 			}
 		}
+	}
+
+	void Update()
+	{
+		moveSpeedBoost.Boosting();
 	}
 }
