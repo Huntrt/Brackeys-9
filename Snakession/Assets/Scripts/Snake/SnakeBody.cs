@@ -18,6 +18,9 @@ public class SnakeBody : MonoBehaviour
 		bodyPart = new List<Vector2>(); partPos = new List<Vector2>();
 		//Remove all line position
 		line.positionCount = 0;
+		//Clear all the body collider point
+		bodyColliders[0].SetPoints(bodyPart);
+		bodyColliders[1].SetPoints(bodyPart);
 		//Deactive the tail when reset
 		tail.gameObject.SetActive(false);
 		//Add the head's position
