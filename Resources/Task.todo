@@ -80,8 +80,17 @@ Menu:
 		▪ Display option.
 		▪ Mouse sensitivity. @consider
 	▪ Customize: @consider
-		▪ Snake color
-		▪ Snake skin pattern
+		▪ Custom:
+			▪ Snake color
+			▪ Snake skin pattern
+			▪ Map color
+		▪ Premade:
+			▪ Array of palette
+			▪ Snake color
+			▪ Snake skin pattern
+			▪ Map color
+		▪ Store using scriptable object.
+		▪ Data for all part that color able.
 Tutorial:
 	▪ Map
 	▪ Food

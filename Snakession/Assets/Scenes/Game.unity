@@ -2910,7 +2910,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 373055343
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Positions: []
   m_Parameters:
     serializedVersion: 3
@@ -2932,19 +2932,19 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.25882354, g: 0.6509804, b: 0.25882354, a: 1}
-      key1: {r: 0.1987952, g: 0.5, b: 0.1987952, a: 1}
-      key2: {r: 0, g: 0.37582397, b: 1, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0.4009434, g: 1, b: 0.55266, a: 1}
+      key1: {r: 0.36436453, g: 0.8679245, b: 0.49272293, a: 1}
+      key2: {r: 1, g: 1, b: 1, a: 0}
+      key3: {r: 1, g: 1, b: 1, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
-      ctime1: 64764
+      ctime1: 65535
       ctime2: 65535
-      ctime3: 0
-      ctime4: 0
+      ctime3: 52428
+      ctime4: 65535
       ctime5: 0
       ctime6: 0
       ctime7: 0
@@ -3478,9 +3478,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 373055343
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: da5cef6545ecc21459b9bab127e6a730, type: 3}
-  m_Color: {r: 0.26039216, g: 0.6509804, b: 0.26039216, a: 1}
+  m_Color: {r: 0.40392157, g: 1, b: 0.5529412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3731,14 +3731,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   level: 0
   mapTypes:
-  - obj: {fileID: 7524652519691772467, guid: 3ee87f7bfea0c044fa3742b5698dfad0, type: 3}
+  - obj: {fileID: 4497463237538086313, guid: 0bb4c299a828523438ea6a1f4a75108e, type: 3}
     weight: 20
     requirement: 0
-  - obj: {fileID: 1507085649210577698, guid: e9cc3a0b2b369af4fb9f15c1a183b3d7, type: 3}
+  - obj: {fileID: 8976466159855373482, guid: 66286167f7c14cf4eace1d15648120f3, type: 3}
     weight: 20
     requirement: 0
-  - obj: {fileID: 3822034965819690843, guid: 0bb4c299a828523438ea6a1f4a75108e, type: 3}
-    weight: 10
+  - obj: {fileID: 2834000230336819514, guid: 3ee87f7bfea0c044fa3742b5698dfad0, type: 3}
+    weight: 20
     requirement: 0
   currentMap: {fileID: 0}
   foodGroup: {fileID: 1627110460}
