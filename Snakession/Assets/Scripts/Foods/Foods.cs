@@ -9,10 +9,10 @@ public class Foods : MonoBehaviour
 
 	void OnEnable()
 	{
-		//Get increase fresh food
-		fresh += Snake.i.mod.freshIncrease.GetIncrease(fresh);
-		//Get additional fresh food
-		fresh += Snake.i.mod.freshAdditional.GetAdditional();
+		//Increase additive fresh food time
+		fresh += Snake.i.mod.freshAdditive.GetAdditive(fresh);
+		//Increase bonus fresh food time
+		fresh += Snake.i.mod.freshBonus.GetBonus();
 		//Automaticly pluck this food when it no longer fresh
 		Invoke("Pluck", fresh);
 	}

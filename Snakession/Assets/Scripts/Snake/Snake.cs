@@ -35,10 +35,10 @@ public class Snake : MonoBehaviour
 	{
 		//This sucessor has eat one more time
 		eatenEachSuccession++;
-		//Begin increase the amount gain from good
-		amount += mod.foodIncrease.GetIncrease(amount, isVegan);
-		//Begin gain additional amount from mod
-		amount += mod.foodAdditional.GetAdditional(isVegan);
+		//Begin increase the additive amount gain from mod 
+		amount += mod.foodMaxHPAdditive.GetAdditive(amount, isVegan);
+		//Begin increase the bonus amount gain from mod
+		amount += mod.foodMaxHPBonus.GetBonus(isVegan);
 		//Grow with the amount has given
 		growing += amount;
 		//While has meet requirement to grow

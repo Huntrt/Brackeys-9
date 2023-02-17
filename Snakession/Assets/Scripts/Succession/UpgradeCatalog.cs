@@ -54,12 +54,12 @@ public class UpgradeCatalog : MonoBehaviour
 	void DigestUpgrading()
 	{
 		//* Increase food eat
-		snake.mod.foodIncrease.food += 5;
+		snake.mod.foodMaxHPAdditive.flex += 5;
 	}
 	void FreshFoodUpgrading()
 	{
 		//* Gain food lifetime
-		snake.mod.freshAdditional.food += 3;
+		snake.mod.freshBonus.flex += 3;
 		//! Lose food spawn rate
 		FoodSpawner.i.spawnRate -= (5f/100f) * FoodSpawner.i.spawnRate;
 	}
@@ -68,6 +68,6 @@ public class UpgradeCatalog : MonoBehaviour
 		//* Gain food spawn rate
 		FoodSpawner.i.spawnRate += (10f/100f) * FoodSpawner.i.spawnRate;
 		//! Lost food lifetime
-		snake.mod.freshIncrease.food -= 2;
+		snake.mod.freshAdditive.flex -= 2;
 	}
 }
