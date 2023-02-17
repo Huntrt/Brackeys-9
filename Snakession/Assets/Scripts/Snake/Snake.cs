@@ -85,6 +85,8 @@ public class Snake : MonoBehaviour
 
 	public void ReleaseSnake()
 	{
+		//Initilize movement speed
+		movement.moveSpeed = movement.initialMoveSpeed;
 		//Enable snake movement
 		movement.enabled = true;
 	}

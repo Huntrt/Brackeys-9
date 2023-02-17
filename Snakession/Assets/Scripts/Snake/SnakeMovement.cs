@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SnakeMovement : MonoBehaviour
 {
-	public float moveSpeed;
+	public float initialMoveSpeed, moveSpeed;
 	public float rotateSpeed;
 	[SerializeField] Transform head;
 	[SerializeField] Rigidbody2D rb;

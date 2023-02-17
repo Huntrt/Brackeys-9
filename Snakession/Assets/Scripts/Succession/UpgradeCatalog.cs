@@ -29,13 +29,13 @@ public class UpgradeCatalog : MonoBehaviour
 
 	void HasteUpgrading() 
 	{
-		//? Increase movement speed
-		snake.movement.moveSpeed += (10f/100f) * snake.movement.moveSpeed;
+		//? Increase inital movement speed
+		snake.movement.initialMoveSpeed += (10f/100f) * snake.movement.initialMoveSpeed;
 	}
 	void StabilizeUpgrading() 
 	{
-		//? Decrease movement speed
-		snake.movement.moveSpeed -= (10f/100f) * snake.movement.moveSpeed;
+		//? Decrease inital movement speed
+		snake.movement.initialMoveSpeed -= (10f/100f) * snake.movement.initialMoveSpeed;
 	}
 	void SteeringUpgrading() 
 	{
