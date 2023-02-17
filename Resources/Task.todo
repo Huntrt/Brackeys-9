@@ -33,25 +33,25 @@ Gameplay:
 	Map:
 		✓ Grid base.
 		✓ Access each grid.
-		▪ Types:
+		▪ Types: @next
 			▪ Square.
 			▪ Plus.
 			▪ Diamond.
 	Foods:
 		✓ Randomly spawn.
 		✓ All food will give max hp.
-		▪ Effects:
+		✓ Ability:
 			✓ Increase max hp
-			▪ Heal 
-			▪ Increase speed for set duration
+			✓ Heal 
+			✓ Increase speed for set duration
 	Traps:
 		✓ Randomly spawn.
 		X Spawn chance scale with difficulty. @consider
-		▪ Spawn rate increase by level.
+		▪ Spawn rate increase by level. @next
 		✓ Trap unlock by level.
 		✓ Populated chance.
 			Chance to spread more from it spawn point
-		▪ Types:
+		▪ Types: @doing
 			▪ Spike - Deal damage once when stepped on.
 			▪ Puddle - Slow down movement when stand on.
 			▪ Mine - Explode upon step or X time then disappear.
@@ -77,6 +77,13 @@ Menu:
 	▪ Customize: @consider
 		▪ Snake color
 		▪ Snake skin pattern
+Tutorial:
+	▪ Map
+	▪ Food
+	▪ Trap
+	▪ Eating tail
+	▪ Instruction
+	▪ Do once
 
 
 Bugs:
@@ -87,3 +94,7 @@ Bugs:
 	✓ 02-15: Head rotation will be buddy when rotate speed >70 while mouse in middle. @minimal
 		✓ Solution:
 			✓ Hard cap rotate speed at 50
+	✓ 02-17: Boost speed end will apply even during sucession. @critical
+		✓ Solution:
+			X A. Only end boost speed if currently not sucession and reset speed boost to it base.
+			✓ B. Instantly end all boost if begin sucession.

@@ -698,19 +698,13 @@ MonoBehaviour:
   spawnChance: 10
   foods:
   - obj: {fileID: 1267683405549145456, guid: 88814255f0a5435489a45287227e4613, type: 3}
-    weight: 200
-    requirement: 0
-  - obj: {fileID: 7324998161384179817, guid: 4cde1facea4205a4eb4c3b6fdff4d02b, type: 3}
     weight: 10
     requirement: 0
-  - obj: {fileID: 5976639259519804655, guid: 4eda8fe7fac73e344be8265360e50c17, type: 3}
-    weight: 5
+  - obj: {fileID: 7235395662335736001, guid: 6b723246112d8374db04ff70734f6c95, type: 3}
+    weight: 10000000
     requirement: 0
-  - obj: {fileID: 1703564597444282770, guid: cbbe485d056918a4eb283b72fa1c75a3, type: 3}
-    weight: 3
-    requirement: 0
-  - obj: {fileID: 1114376673531295315, guid: ebfa007159d271f46a8f50a5b35cc180, type: 3}
-    weight: 1
+  - obj: {fileID: 6796863062830401029, guid: 4cde1facea4205a4eb4c3b6fdff4d02b, type: 3}
+    weight: 10
     requirement: 0
 --- !u!1 &372277651
 GameObject:
@@ -4222,13 +4216,16 @@ MonoBehaviour:
     vegan: 0
     meat: 0
   foodMaxHPAdditive:
-    flex: 100
+    flex: 0
     vegan: 0
     meat: 0
   freshBonus:
     flex: 0
   freshAdditive:
     flex: 0
+  moveSpeedBoost:
+    movement: {fileID: 2049876864}
+    boosts: []
 --- !u!114 &2049876863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4256,6 +4253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2207dddd608650b4185936923b47fcfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialMoveSpeed: 7
   moveSpeed: 7
   rotateSpeed: 7
   head: {fileID: 1820746345}
