@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3169bd824a58ac48a88e449d959cc26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sourceName: Slipperu
+  sourceName: Slippery
   speedAlterAdditive: 200
   decayDuration: 0.3
 --- !u!212 &495578178615198134
