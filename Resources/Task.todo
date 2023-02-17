@@ -55,12 +55,12 @@ Gameplay:
 		✓ Populated chance.
 			Chance to spread more from it spawn point
 		▪ Types: @doing
-			▪ Spike - Deal damage once when stepped on.
-			▪ Puddle - Slow down movement when stand on.
-			▪ Mine - Explode upon step or X time then disappear.
-			▪ Cutter - Strike in an circle shape ervery X sec.
-			▪ Flame - Rapidly deal damage and give snake an small speed boost.
-			▪ Bomb - Randomly drop that explode.
+			✓ Spike - Deal damage once when stepped on.
+			✓ Puddle - Slow down movement when stand on.
+			X Mine - Explode upon step or X time then disappear.
+			✓ Cutter - Strike in an circle shape ervery X sec.
+			✓ Flame - Rapidly deal damage and give snake an small speed boost.
+			✓ Bomb - Randomly drop that explode.
 			▪ Turret - shoot bullet in an direction
 	Effects:
 		▪ Popup:
@@ -68,6 +68,8 @@ Gameplay:
 			▪ When heal.
 			▪ When got speed effect.
 			▪ When hurt.
+		▪ When tail appear.
+		▪ When grow. @consider
 Menu:
 	▪ Start game.
 	▪ Pause game.
