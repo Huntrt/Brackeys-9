@@ -96,7 +96,7 @@ public class Snake : MonoBehaviour
 		//Stop if max health are 0
 		if(maxHealth == 0) return;
 		//Display health bar
-		healthBar.fillAmount = Mathf.Clamp01(health/maxHealth);
+		healthBar.fillAmount = Mathf.Clamp01((float)health/(float)maxHealth);
 		//Display health as text
 		healthText.text = health + "/" + maxHealth;
 	}
