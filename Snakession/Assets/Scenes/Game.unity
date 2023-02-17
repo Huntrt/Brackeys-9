@@ -1745,7 +1745,7 @@ MonoBehaviour:
     chance: 100
     placeTraps:
     - obj: {fileID: 4974741918930583248, guid: 30dde1a8250441444a86289563d951d2, type: 3}
-      weight: 1
+      weight: 10
       requirement: 0
       populateChance: 10
       populateLimit: 3
@@ -1754,9 +1754,14 @@ MonoBehaviour:
       requirement: 0
       populateChance: 10
       populateLimit: 3
+    - obj: {fileID: 7460733313422925239, guid: ec98f9da212fe864eadda572a9670e3c, type: 3}
+      weight: 10
+      requirement: 0
+      populateChance: 10
+      populateLimit: 3
   spawner:
-    rate: 0.1
-    chance: 10
+    rate: 0
+    chance: 0
     rateTimer: 0
     spawnTraps:
     - obj: {fileID: 6379504904974702719, guid: f44afd822fee6e04a8b37960ffe2f4a9, type: 3}
@@ -1973,8 +1978,9 @@ GameObject:
   - component: {fileID: 992000026}
   - component: {fileID: 992000025}
   - component: {fileID: 992000027}
+  - component: {fileID: 992000028}
   m_Layer: 10
-  m_Name: BodyCollider
+  m_Name: Body Collider
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2034,6 +2040,27 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!50 &992000028
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992000024}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1031962550
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,8 +3741,8 @@ MonoBehaviour:
     weight: 10
     requirement: 0
   currentMap: {fileID: 0}
-  foodGroup: {fileID: 1579750822}
-  trapGroup: {fileID: 1627110460}
+  foodGroup: {fileID: 1627110460}
+  trapGroup: {fileID: 1579750822}
   mapLayer:
     serializedVersion: 2
     m_Bits: 256
