@@ -15,5 +15,6 @@ MonoBehaviour:
   upgrade: 6
   cost: 23
   weight: 19
-  icon: {fileID: 0}
+  icon: {fileID: -1480984688936448156, guid: c27eb327ac511664eb0acd0ca1214c6e, type: 3}
+  iconColor: {r: 0.71311915, g: 0.35500002, b: 1, a: 1}
   description: Food spawn more but disappear faster

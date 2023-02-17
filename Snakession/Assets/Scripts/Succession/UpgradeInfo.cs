@@ -7,5 +7,6 @@ public class UpgradeInfo : ScriptableObject
 	public int cost;
 	public float weight;
 	public Sprite icon;
+	public Color iconColor;
 	[TextArea(5,20)] public string description;
 }

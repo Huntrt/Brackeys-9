@@ -25,6 +25,8 @@ public class UpgradeManager : MonoBehaviour
 			panels[p].nameText.text = info.name;
 			panels[p].descText.text = info.description;
 			panels[p].costText.text = "$" + info.cost;
+			panels[p].iconImg.sprite = info.icon;
+			panels[p].iconImg.color = info.iconColor;
 			//Reset button onclick then add weighted upgrade onto it
 			panels[p].upgradeButton.onClick.RemoveAllListeners();
 			panels[p].upgradeButton.onClick.AddListener(() => {catalog.UseUpgrade(info);});
