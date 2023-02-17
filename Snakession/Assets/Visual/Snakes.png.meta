@@ -1,7 +1,16 @@
 fileFormatVersion: 2
-guid: 23510b0418fa22b4887b46bfcb7c850d
+guid: c6537ec9bb423cc42aef28a8311cea8b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4107840097931825539
+    second: Snakes_Head
+  - first:
+      213: -6959491262654322683
+    second: Snakes_Tail
+  - first:
+      213: -1444103524255051341
+    second: Snakes_Eyes
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -41,7 +50,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -102,7 +111,70 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Snakes_Head
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 240
+        width: 160
+        height: 200
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7eeaa8f1350ef6c0800000000000000
+      internalID: -4107840097931825539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snakes_Tail
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508ed00d19bea6f90800000000000000
+      internalID: -6959491262654322683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snakes_Eyes
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 78
+        width: 160
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b153e1fe7385fbe0800000000000000
+      internalID: -1444103524255051341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
