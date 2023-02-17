@@ -33,6 +33,7 @@ Gameplay:
 	Map:
 		✓ Grid base.
 		✓ Access each grid.
+		▪ Random rotation when object spawn.
 		▪ Types: @next
 			▪ Square.
 			▪ Plus.
@@ -98,6 +99,6 @@ Bugs:
 		✓ Solution:
 			X A. Only end boost speed if currently not sucession and reset speed boost to it base.
 			✓ B. Instantly end all boost if begin sucession.
-	▪ 02-17: Slowing down trap effect dont affect that much. @minimal
+	▪ 02-17: Slowing down trap effect dont affect that much. @minimal @consider
 		▪ Solution:
 			▪ Apply all the speed boost then apply the slow?
