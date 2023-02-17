@@ -39,8 +39,8 @@ public class SnakeModifiers : MonoBehaviour
 	public MoveSpeedBoost moveSpeedBoost; [System.Serializable] public class MoveSpeedBoost
 	{
 		[SerializeField] SnakeMovement movement;
-		[SerializeField] List<BoostData> boosts = new List<BoostData>();
-		[System.Serializable] class BoostData : BuffData
+		public List<BoostData> boosts = new List<BoostData>();
+		[System.Serializable] public class BoostData : BuffData
 		{
 			public float additive;
 
@@ -82,10 +82,8 @@ public class SnakeModifiers : MonoBehaviour
 				//Remove this boost if it ended
 				else boosts.RemoveAt(b);
 			}
-			//Boost initial move speed with all the additive
-			float additiveSpeed = (1*(totalAdditive/100f)) * movement.initialMoveSpeed;
-			//Apply additive speed to move speed
-			movement.moveSpeed = movement.initialMoveSpeed + additiveSpeed;
+			//Apply initial move speed that has are additive
+			movement.moveSpeed = movement.initialMoveSpeed + ((1*(totalAdditive/100f)) * movement.initialMoveSpeed);
 		}
 	}
 

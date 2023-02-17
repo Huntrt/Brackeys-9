@@ -85,8 +85,8 @@ public class Snake : MonoBehaviour
 
 	public void ReleaseSnake()
 	{
-		//Initilize movement speed
-		movement.moveSpeed = movement.initialMoveSpeed;
+		//Clear all the speed booste
+		mod.moveSpeedBoost.boosts.Clear();
 		//Enable snake movement
 		movement.enabled = true;
 	}
