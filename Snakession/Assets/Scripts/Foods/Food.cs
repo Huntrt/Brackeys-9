@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class Food : MonoBehaviour
 {
+	public bool isVegan;
     public int feed;
 	public float fresh;
-	public Vector2 spawnCoord;
-	public bool isVegan;
+	[HideInInspector] public Vector2 spawnCoord;
 
 	void OnEnable()
 	{
