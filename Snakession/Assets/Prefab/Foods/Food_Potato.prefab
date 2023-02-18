@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isVegan: 1
   feed: 4
-  fresh: 30
+  fresh: 10
   randomRotation: 360
   spawnCoord: {x: 0, y: 0}
 --- !u!114 &4485188380256817339
