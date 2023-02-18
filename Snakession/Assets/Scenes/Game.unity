@@ -2887,7 +2887,7 @@ GameObject:
   - component: {fileID: 1223503560}
   - component: {fileID: 1223503559}
   m_Layer: 5
-  m_Name: Counter
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2932,7 +2932,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'SUCCESSOR: '
+  m_text: LEVEL
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 88f34ac03d34ef048b566cf7903e1726, type: 2}
   m_sharedMaterial: {fileID: 5676617179641671052, guid: 88f34ac03d34ef048b566cf7903e1726,
@@ -4635,6 +4635,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  levelText: {fileID: 1223503559}
 --- !u!4 &1893346473
 Transform:
   m_ObjectHideFlags: 0

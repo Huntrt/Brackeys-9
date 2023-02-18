@@ -49,6 +49,7 @@ MonoBehaviour:
   isVegan: 0
   feed: 30
   fresh: 9
+  randomRotation: 360
   spawnCoord: {x: 0, y: 0}
 --- !u!114 &7591738662720558277
 MonoBehaviour:

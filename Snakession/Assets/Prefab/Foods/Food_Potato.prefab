@@ -48,6 +48,7 @@ MonoBehaviour:
   isVegan: 1
   feed: 5
   fresh: 30
+  randomRotation: 360
   spawnCoord: {x: 0, y: 0}
 --- !u!212 &7288531946462577262
 SpriteRenderer:

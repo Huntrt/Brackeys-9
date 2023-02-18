@@ -5,11 +5,14 @@ public class Food : MonoBehaviour
 	public bool isVegan;
     public int feed;
 	public float fresh;
+	[SerializeField] float randomRotation;
 	[HideInInspector] public Vector2 spawnCoord;
 	public System.Action onConsume;
 
 	void OnEnable()
 	{
+		//Randomize the rotation when this food got spawn
+		transform.localRotation = Quaternion.Euler(0,0, Random.Range(0, randomRotation));
 		//Increase additive fresh food time
 		fresh += Snake.i.mod.freshAdditive.GetAdditive(fresh);
 		//Increase bonus fresh food time
