@@ -54,6 +54,8 @@ public class SnakeModifiers : MonoBehaviour
 
 		public void AddBoost(float additive, float duration, string source)
 		{
+			//If this speed boost has long duration then popup regarless of duplicate
+			if(duration > 1) SpeedPopup(additive);
 			//Go through all the boost buff to check if the source given are already boost
 			for (int b = 0; b < boosts.Count; b++) if(boosts[b].source == source)
 			{
@@ -62,6 +64,8 @@ public class SnakeModifiers : MonoBehaviour
 			}
 			//Add an new booste buff with given source and duration
 			boosts.Add(new BoostData(source, duration, additive));
+			//Only popup when new boost wince duration are too small
+			if(duration <= 1) SpeedPopup(additive);
 		}
 
 		public void Boosting()
@@ -84,6 +88,14 @@ public class SnakeModifiers : MonoBehaviour
 			}
 			//Apply initial move speed that has are additive
 			movement.moveSpeed = movement.InitialMoveSpeed + ((1*(totalAdditive/100f)) * movement.InitialMoveSpeed);
+		}
+
+		void SpeedPopup(float additive)
+		{
+			//Add an plus sign if additive is increase
+			string additivePopup = (additive > 0) ? "+" + additive : additive.ToString();
+			//Popup the speed additive "+20% Speed"(Blue)
+			TextPopup.i.Popuping("<#1fa5ff>" + additivePopup + "% " + "Speed</color>");
 		}
 	}
 
