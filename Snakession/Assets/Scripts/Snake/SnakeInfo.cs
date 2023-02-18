@@ -1,26 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
 public class SnakeInfo : MonoBehaviour
 {
-
-	public Health health; [System.Serializable] public class Health
-	{
-    	[SerializeField] Snake snake;
-		[SerializeField] TextMeshProUGUI healthText;
-		[SerializeField] Image healthBar;
-	
-		public void RefreshHealthBar()
-		{
-			//Fill health bar with health currently have 
-			healthBar.fillAmount = Mathf.Clamp01((float)snake.health / (float)snake.maxHealth);
-			//Display health text as 80/100
-			healthText.text = snake.health + "\n----\n" + snake.maxHealth;
-		}
-	}
-
 	public Movement movement; [System.Serializable] public class Movement
 	{
 		[SerializeField] Snake snake;
@@ -32,9 +15,14 @@ public class SnakeInfo : MonoBehaviour
 			speedText.text = snake.movement.moveSpeed.ToString();
 		}
 	}
-
+	
 	void Update()
 	{
 		movement.RefreshSpeedText();
+	}
+
+	void ClearHealthFlashing()
+	{
+
 	}
 }

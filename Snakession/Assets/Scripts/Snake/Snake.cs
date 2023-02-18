@@ -29,6 +29,7 @@ public class Snake : MonoBehaviour
 	public SnakeMoney money;
 	public SnakeScore score;
 	public SnakeInfo info;
+	public SnakeHealthEffect healthEffect;
 
 	public void Eat(int amount, bool isVegan)
 	{
@@ -56,14 +57,14 @@ public class Snake : MonoBehaviour
 	{
 		health += amount;
 		health = Mathf.Clamp(health, 0, maxHealth);
-		info.health.RefreshHealthBar();
+		healthEffect.RefreshHealthBar();
 	}
 
 	public void Hurt(int amount)
 	{
 		health -= amount;
 		if(health <= 0) Destroy(gameObject);
-		info.health.RefreshHealthBar();
+		healthEffect.RefreshHealthBar();
 	}
 
 	public void ResetSnake()
