@@ -2,14 +2,20 @@ using UnityEngine;
 
 public class SnakeMovement : MonoBehaviour
 {
-	public float initialMoveSpeed, moveSpeed;
+	public float moveSpeed; [SerializeField] float initialMoveSpeed;
 	public float rotateSpeed;
 	[SerializeField] Transform head;
 	[SerializeField] Rigidbody2D rb;
 	Vector2 mousePos;
 	Camera cam;
+	
+	public float InitialMoveSpeed 
+	{
+		get => Mathf.Clamp(initialMoveSpeed, 0f, 25f); 
+		set => initialMoveSpeed = Mathf.Clamp(value, 0f, 25f);
+	}
 
-    void Start()
+	void Start()
     {
         cam = Camera.main;
     }
@@ -22,8 +28,6 @@ public class SnakeMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		//Max allow move speed is 25
-		moveSpeed = Mathf.Clamp(moveSpeed, 0f, 25f);
 		//If has reached 90% of an step toward mouse
 		if(Vector2.Distance(rb.position, mousePos) <= moveSpeed/90)
 		{

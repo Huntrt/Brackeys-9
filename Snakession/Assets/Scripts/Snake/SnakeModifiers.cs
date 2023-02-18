@@ -83,7 +83,7 @@ public class SnakeModifiers : MonoBehaviour
 				else boosts.RemoveAt(b);
 			}
 			//Apply initial move speed that has are additive
-			movement.moveSpeed = movement.initialMoveSpeed + ((1*(totalAdditive/100f)) * movement.initialMoveSpeed);
+			movement.moveSpeed = movement.InitialMoveSpeed + ((1*(totalAdditive/100f)) * movement.InitialMoveSpeed);
 		}
 	}
 
