@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: -1444103524255051341
     second: Snakes_Eyes
+  - first:
+      213: 3125857594053020995
+    second: Snakes_Heart
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -171,6 +174,27 @@ TextureImporter:
       bones: []
       spriteID: 3b153e1fe7385fbe0800000000000000
       internalID: -1444103524255051341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Snakes_Heart
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 254
+        width: 198
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34dccf79be6416b20800000000000000
+      internalID: 3125857594053020995
       vertices: []
       indices: 
       edges: []
