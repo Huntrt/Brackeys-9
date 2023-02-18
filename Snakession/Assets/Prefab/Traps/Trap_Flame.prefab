@@ -4833,6 +4833,7 @@ GameObject:
   - component: {fileID: 4900072969383520030}
   - component: {fileID: 7460733313422925238}
   - component: {fileID: 1538544585583914453}
+  - component: {fileID: -1511156180287442114}
   - component: {fileID: 5272015734649433777}
   m_Layer: 6
   m_Name: Trap_Flame
@@ -4921,6 +4922,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1511156180287442114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7460733313422925239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3169bd824a58ac48a88e449d959cc26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourceName: Flame Trap
+  speedAlterAdditive: 100
+  decayDuration: 0.1
 --- !u!61 &5272015734649433777
 BoxCollider2D:
   m_ObjectHideFlags: 0
