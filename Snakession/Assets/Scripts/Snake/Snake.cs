@@ -71,8 +71,6 @@ public class Snake : MonoBehaviour
 
 	public void ResetSnake()
 	{
-		//Move head back to the center
-		body.head.transform.position = Vector3.zero;
 		//STtart an new eat count for this sucessor
 		eatenEachSuccession = 0;
 		//Disable snake movement
@@ -81,6 +79,8 @@ public class Snake : MonoBehaviour
 
 	public void ReleaseSnake()
 	{
+		//Move head back to the center
+		body.head.transform.position = Vector3.zero;
 		//Initial max health
 		maxHealth = initalHealth;
 		//Heal to full max health
