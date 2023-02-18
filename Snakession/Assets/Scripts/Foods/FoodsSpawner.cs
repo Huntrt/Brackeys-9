@@ -35,27 +35,33 @@ public class FoodsSpawner : MonoBehaviour
 			//If allow to spawn by chance
 			if(chanced)
 			{
-				//Get any random empty plot
-				int ranPlot = Random.Range(0, Map.i.emptyPlots.Count);
-				//Drop the food at coordinate of random empty plot has get
-				DropFood(Map.i.emptyPlots[ranPlot].coordinate);
+				//Weighted an food to choose which plot it will spawn
+				ChooseFoodPlot(WeightSystem.Weighting(foods, Map.i.level).obj);
 			}
 			//Reset rate timer
 			spawnRateTimer -= spawnRateTimer;
 		}
 	}
 
-	public void DropFood(Vector2 coord)
+	public void ChooseFoodPlot(GameObject food)
+	{				
+		//Get any random empty plot
+		int ranPlot = Random.Range(0, Map.i.emptyPlots.Count);
+		//Create the food at coordinate of random empty plot has get
+		CreatingFood(Map.i.emptyPlots[ranPlot].coordinate, food);
+	}
+
+	public void CreatingFood(Vector2 coord, GameObject foodToCreated)
 	{
-		//Spawn object at given coord on the map with the foods has been weighted
-		GameObject spawn = Map.i.PlaceObject(coord, WeightSystem.Weighting(foods, Map.i.level).obj);
-		//If successfully spawn food
-		if(spawn != null)
+		//Place the food need to create onto map at given coordinates
+		GameObject created = Map.i.PlaceObject(coord, foodToCreated);
+		//If successfully created food
+		if(created != null)
 		{
-			//Group food just spawned
-			spawn.transform.SetParent(Map.i.foodGroup);
-			//Set the object has been spawn's spawn coordinate
-			spawn.GetComponent<Food>().spawnCoord = coord;
+			//Group food just create
+			created.transform.SetParent(Map.i.foodGroup);
+			//Set the food has been spawn it spawn coordinate
+			created.GetComponent<Food>().spawnCoord = coord;
 		}
 	}
 }
