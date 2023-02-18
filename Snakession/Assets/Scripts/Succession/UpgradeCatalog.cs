@@ -16,8 +16,8 @@ public class UpgradeCatalog : MonoBehaviour
 		{
 			//Upgrading given upgrade
 			Invoke(info.upgrade + "Upgrading", 0);
-			//Succession is over
-			SuccessionManager.i.EndSuccession();
+			//Invoke end upgrade
+			Invoke("EndUpgrade", 0);
 		}
 		//If out of money
 		else
@@ -26,6 +26,10 @@ public class UpgradeCatalog : MonoBehaviour
 			print("You are out of money");
 		}
 	}
+
+	
+	//Succession is over after end upgrade
+	void EndUpgrade() {SuccessionManager.i.EndSuccession();}
 
 	void HasteUpgrading() 
 	{
