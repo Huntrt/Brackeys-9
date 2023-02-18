@@ -48,8 +48,6 @@ public class Map : MonoBehaviour
 		emptyPlots.Clear(); filledPlots.Clear();
 		//Destroy the current map if it exist
 		if(currentMap != null) Destroy(currentMap.gameObject);
-		//Display the level counter
-		levelText.text = "LEVEL " + level;
 		//Map has been clear
 		onMapClear.Invoke();
 	}
@@ -62,6 +60,8 @@ public class Map : MonoBehaviour
 		emptyPlots = plotSettings.GeneratePlot();
 		//Map has been created
 		onMapCreate.Invoke();
+		//Display the level counter
+		levelText.text = "LEVEL " + level;
 	}
 
 	public GameObject PlaceObject(Vector2 coord, GameObject obj)
