@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class SuccessionManager : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class SuccessionManager : MonoBehaviour
 
 	[SerializeField] GameObject successionPanel;
 	[SerializeField] UpgradeManager upgradeManager;
+	public TextMeshProUGUI maxHPAcquiredText, scoreConvertText, moneyConvertText;
+
 	
 	public void BeginSuccession()
 	{
@@ -25,6 +28,8 @@ public class SuccessionManager : MonoBehaviour
 		Snake.i.money.EarningMaxHealth();
 		//Gain score from snake max health
 		Snake.i.score.GainingScore();
+		//Display the amount of max health has acquired
+		maxHPAcquiredText.text = "MAX HP ACQUIRED: " + Snake.i.maxHealth;
 		//Clear the map
 		Map.i.ClearMap();
 		//Refresh the upgrade

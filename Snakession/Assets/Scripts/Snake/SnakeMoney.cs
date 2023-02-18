@@ -1,10 +1,8 @@
 using UnityEngine;
-using TMPro;
 
 public class SnakeMoney : MonoBehaviour
 {
     public int money;
-	public TextMeshProUGUI moneyText;
 	public float earnEveryHealth;
 
 	public bool Spend(int price)
@@ -29,20 +27,16 @@ public class SnakeMoney : MonoBehaviour
 
 	public void EarningMaxHealth()
 	{
-		//Get max health from snake
-		float maxHP = Snake.i.maxHealth;
-		//If haven't earn all the max health
-		while (maxHP >= earnEveryHealth)
-		{
-			//Earn 1 money
-			Earn(1);
-			//Lose 1 earn
-			maxHP -= earnEveryHealth;
-		}
+		//Divide max health with each max health to earn
+		float earn = Snake.i.maxHealth/earnEveryHealth;
+		Earn((int)earn);
+		//Display money has converted in format "MONEY (+12)92"
+		SuccessionManager.i.moneyConvertText.text = "MONEY:" + " (+" + earn + ") " + money;
 	}
 
 	void UpdateMoneyText()
 	{
-		moneyText.text = "$" + money;
+		//Display money has converted in format "MONEY (+12)92"
+		SuccessionManager.i.moneyConvertText.text = "MONEY:" + money;
 	}
 }
