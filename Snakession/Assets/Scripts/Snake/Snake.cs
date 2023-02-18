@@ -39,6 +39,8 @@ public class Snake : MonoBehaviour
 		amount += mod.foodMaxHPAdditive.GetAdditive(amount, isVegan);
 		//Begin increase the bonus amount gain from mod
 		amount += mod.foodMaxHPBonus.GetBonus(isVegan);
+		//Popup the amount has grow "^23"(Yellow)
+		TextPopup.i.Popuping("<#ffff1f>^"+ amount +"</color>");
 		//Increase max health than heal with given amount
 		maxHealth += amount; Heal(amount);
 		//Grow with the amount has given
@@ -59,6 +61,8 @@ public class Snake : MonoBehaviour
 		health = Mathf.Clamp(health, 0, maxHealth);
 		healthEffect.RefreshHealthBar();
 		healthEffect.FlashingHealthStatus(false);
+		//Popup the amount has head "+23"(Green)
+		TextPopup.i.Popuping("<#35ff1f>+"+ amount +"</color>");
 	}
 
 	public void Hurt(int amount)
@@ -67,6 +71,8 @@ public class Snake : MonoBehaviour
 		if(health <= 0) Destroy(gameObject);
 		healthEffect.RefreshHealthBar();
 		healthEffect.FlashingHealthStatus(true);
+		//Popup the amount has hurt "-23"(Red)
+		TextPopup.i.Popuping("<#ff1f3d>-"+ amount +"</color>");
 	}
 
 	public void ResetSnake()
