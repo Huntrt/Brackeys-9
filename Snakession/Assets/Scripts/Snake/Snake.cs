@@ -28,9 +28,7 @@ public class Snake : MonoBehaviour
 	public SnakeModifiers mod;
 	public SnakeMoney money;
 	public SnakeScore score;
-	[Header("Health GUI")]
-	[SerializeField] TextMeshProUGUI healthText;
-	[SerializeField] Image healthBar;
+	public SnakeInfo info;
 
 	public void Eat(int amount, bool isVegan)
 	{
@@ -58,14 +56,14 @@ public class Snake : MonoBehaviour
 	{
 		health += amount;
 		health = Mathf.Clamp(health, 0, maxHealth);
-		RefreshHealthBar();
+		info.RefreshHealthBar();
 	}
 
 	public void Hurt(int amount)
 	{
 		health -= amount;
 		if(health <= 0) Destroy(gameObject);
-		RefreshHealthBar();
+		info.RefreshHealthBar();
 	}
 
 	public void ResetSnake()
@@ -90,13 +88,5 @@ public class Snake : MonoBehaviour
 		mod.moveSpeedBoost.boosts.Clear();
 		//Enable snake movement
 		movement.enabled = true;
-	}
-
-	void RefreshHealthBar()
-	{
-		//Fill health bar with health currently have 
-		healthBar.fillAmount = Mathf.Clamp01((float)health / (float)maxHealth);
-		//Display health text as 80/100
-		healthText.text = health + "\n----\n" + maxHealth;
 	}
 }
