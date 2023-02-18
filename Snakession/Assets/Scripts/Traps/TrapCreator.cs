@@ -67,7 +67,9 @@ public class TrapCreator : MonoBehaviour
 	public void DropTrap(Vector2 coord, TrapDrop[] traps)
 	{
 		//Weight the traps
-		WeightDrop weighted = WeightSystem.Weighting((WeightDrop[])traps);
+		WeightDrop weighted = WeightSystem.Weighting((WeightDrop[])traps, Map.i.level);
+		//Stop drop if weighted nothing
+		if(weighted == null) return;
 		//The trap will be drop
 		TrapDrop trap = null;
 		//Go through all the traps could drop
