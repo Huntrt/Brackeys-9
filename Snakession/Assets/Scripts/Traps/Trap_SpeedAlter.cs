@@ -6,7 +6,7 @@ public class Trap_SpeedAlter : MonoBehaviour
     public float speedAlterAdditive;
 	public float decayDuration;
 
-	void OnTriggerEnter2D(Collider2D other) 
+	void OnTriggerStay2D(Collider2D other) 
 	{
 		//If player stay in the trap
 		if(other.CompareTag("Player"))
