@@ -33,7 +33,7 @@ Gameplay:
 	Map:
 		✓ Grid base.
 		✓ Access each grid.
-		▪ Random rotation when object spawn. @doing
+		✓ Random rotation when object spawn.
 		▪ Types:
 			✓ Square.
 			✓ Plus.
@@ -52,11 +52,11 @@ Gameplay:
 	Traps:
 		✓ Randomly spawn.
 		X Spawn chance scale with difficulty. @consider
-		▪ Spawn rate increase by level. @next
+		✓ Spawn rate increase by level. 
 		✓ Trap unlock by level.
 		✓ Populated chance.
 			Chance to spread more from it spawn point
-		▪ Types: @doing
+		✓ Types:
 			✓ Spike - Deal damage once when stepped on.
 			✓ Puddle - Slow down movement when stand on.
 			X Mine - Explode upon step or X time then disappear.
@@ -70,36 +70,35 @@ Gameplay:
 			✓ When heal.
 			✓ When got speed effect.
 			✓ When hurt.
-		▪ When tail appear.
+		✓ When tail appear.
 		X When grow. @consider
 Menu:
 	✓ Start game.
 	✓ Pause game.
-	▪ Game over:
-		▪ Score.
-		▪ Level reached.
-		▪ Food eated.
-		▪ Max HP Accumulated.
-		▪ Damage taken.
-		▪ Longest Body. @consider
+	✓ Game over:
+		✓ Score.
+		✓ Level reached.
+		✓ Food eated.
+		✓ Max HP Accumulated.
+		X Longest Body. @consider
 	✓ Settings:
 		X Mouse or keyboard control option. @consider
 		X Keyboard control keybinds. @consider
 		✓ Volume slider.
 		✓ Display option.
 		X Mouse sensitivity. @consider
-	▪ Customize: @consider
-		▪ Custom:
-			▪ Snake color
-			▪ Snake skin pattern
-			▪ Map color
-		▪ Premade:
-			▪ Array of palette
-			▪ Snake color
-			▪ Snake skin pattern
-			▪ Map color
-		▪ Store using scriptable object.
-		▪ Data for all part that color able.
+	X Customize: @consider
+		Custom:
+			Snake color
+			Snake skin pattern
+			Map color
+		Premade:
+			Array of palette
+			Snake color
+			Snake skin pattern
+			Map color
+		Store using scriptable object.
+		Data for all part that color able.
 Tutorial: @consider
 	▪ Map
 	▪ Food

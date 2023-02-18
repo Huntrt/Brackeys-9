@@ -22,7 +22,7 @@ public class Snake : MonoBehaviour
 	//Every X max health will grow
 	public float growthEveryHealth;
 	float growing;
-	public int eatenEachSuccession;
+	public int foodEaten, totalMaxHPGained;
 	public SnakeBody body;
 	public SnakeMovement movement;
 	public SnakeModifiers mod;
@@ -33,12 +33,14 @@ public class Snake : MonoBehaviour
 
 	public void Eat(int amount, bool isVegan)
 	{
-		//This sucessor has eat one more time
-		eatenEachSuccession++;
 		//Begin increase the additive amount gain from mod 
 		amount += mod.foodMaxHPAdditive.GetAdditive(amount, isVegan);
 		//Begin increase the bonus amount gain from mod
 		amount += mod.foodMaxHPBonus.GetBonus(isVegan);
+		//This snake has eat one more time
+		foodEaten++;
+		//Increase the amount has gained for max health
+		totalMaxHPGained += amount;
 		//Popup the amount has grow "^23"(Yellow)
 		TextPopup.i.Popuping("<#ffff1f>^"+ amount +"</color>");
 		//Increase max health than heal with given amount
@@ -57,7 +59,9 @@ public class Snake : MonoBehaviour
 
 	public void Heal(int amount)
 	{
+		//Gain health with amount given
 		health += amount;
+		//Clamp health to max health
 		health = Mathf.Clamp(health, 0, maxHealth);
 		healthEffect.RefreshHealthBar();
 		healthEffect.FlashingHealthStatus(false);
@@ -67,8 +71,16 @@ public class Snake : MonoBehaviour
 
 	public void Hurt(int amount)
 	{
+		//Lose health with amount given
 		health -= amount;
-		if(health <= 0) Destroy(gameObject);
+		//If out of health
+		if(health <= 0)
+		{	
+			//Game is over 
+			GameOver.i.GameIsOver();
+			//Destroy the player
+			Destroy(gameObject);
+		}
 		healthEffect.RefreshHealthBar();
 		healthEffect.FlashingHealthStatus(true);
 		//Popup the amount has hurt "-23"(Red)
@@ -78,7 +90,7 @@ public class Snake : MonoBehaviour
 	public void ResetSnake()
 	{
 		//STtart an new eat count for this sucessor
-		eatenEachSuccession = 0;
+		foodEaten = 0;
 		//Disable snake movement
 		movement.enabled = false;
 	}
