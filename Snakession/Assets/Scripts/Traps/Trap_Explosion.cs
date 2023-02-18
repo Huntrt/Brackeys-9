@@ -26,6 +26,8 @@ public class Trap_Explosion : MonoBehaviour
 			{
 				//Hurt the snake
 				Snake.i.Hurt(damage);
+				//Stop damaging
+				break;
 			}
 		}
 		//Destroy the trap
