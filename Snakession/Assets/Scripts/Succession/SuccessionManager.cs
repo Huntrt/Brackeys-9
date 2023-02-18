@@ -19,7 +19,7 @@ public class SuccessionManager : MonoBehaviour
 
 	[SerializeField] GameObject successionPanel;
 	[SerializeField] UpgradeManager upgradeManager;
-	public TextMeshProUGUI maxHPAcquiredText, scoreConvertText, moneyConvertText;
+	public TextMeshProUGUI maxHPAcquiredText, scoreConvertText, moneyConvertText, nextLevelText;
 
 	
 	public void BeginSuccession()
@@ -30,6 +30,7 @@ public class SuccessionManager : MonoBehaviour
 		Snake.i.score.GainingScore();
 		//Display the amount of max health has acquired
 		maxHPAcquiredText.text = "MAX HP ACQUIRED: " + Snake.i.maxHealth;
+		nextLevelText.text = "LEVEL " + Map.i.level + " > " + (Map.i.level+1);
 		//Clear the map
 		Map.i.ClearMap();
 		//Refresh the upgrade

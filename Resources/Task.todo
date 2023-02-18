@@ -75,6 +75,7 @@ Gameplay:
 Menu:
 	▪ Start game.
 	▪ Pause game.
+	▪ Game over.
 	▪ Settings:
 		▪ Mouse or keyboard control option. @consider
 		▪ Keyboard control keybinds. @consider

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9253df094bab645ab9242ad37bab00, type: 3}
   m_Name: Map Color
   m_EditorClassIdentifier: 
-  background: {r: 0, g: 0, b: 0, a: 0}
-  ground: {r: 0, g: 0, b: 0, a: 0}
-  walls: {r: 0, g: 0, b: 0, a: 0}
+  background: {r: 0.22352941, g: 0.35686275, b: 0.39215687, a: 1}
+  ground: {r: 0.17254902, g: 0.20000002, b: 0.20000002, a: 1}
+  walls: {r: 0.9607843, g: 0.9490196, b: 0.90588236, a: 1}

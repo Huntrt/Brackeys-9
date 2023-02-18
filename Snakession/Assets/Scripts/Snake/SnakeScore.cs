@@ -16,6 +16,6 @@ public class SnakeScore : MonoBehaviour
 		//Gaind score
 		score += (int)gain;
 		//Display score has converted in format "SCORE (+12)92"
-		SuccessionManager.i.scoreConvertText.text = "SCORE:" + " (+" + gain + ") " + score;
+		SuccessionManager.i.scoreConvertText.text = "= SCORE:" + " (+" + (int)gain + ") " + score;
 	}
 }

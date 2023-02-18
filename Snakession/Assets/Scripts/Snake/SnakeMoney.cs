@@ -10,7 +10,6 @@ public class SnakeMoney : MonoBehaviour
 		if(money - price > 0)
 		{
 			money -= price;
-			UpdateMoneyText();
 			return true;
 		}
 		else
@@ -22,7 +21,6 @@ public class SnakeMoney : MonoBehaviour
 	public void Earn(int amount)
 	{
 		money += amount;
-		UpdateMoneyText();
 	}
 
 	public void EarningMaxHealth()
@@ -31,12 +29,6 @@ public class SnakeMoney : MonoBehaviour
 		float earn = Snake.i.maxHealth/earnEveryHealth;
 		Earn((int)earn);
 		//Display money has converted in format "MONEY (+12)92"
-		SuccessionManager.i.moneyConvertText.text = "MONEY:" + " (+" + earn + ") " + money;
-	}
-
-	void UpdateMoneyText()
-	{
-		//Display money has converted in format "MONEY (+12)92"
-		SuccessionManager.i.moneyConvertText.text = "MONEY:" + money;
+		SuccessionManager.i.moneyConvertText.text = "= MONEY:" + " (+" + earn + ") " + money;
 	}
 }
