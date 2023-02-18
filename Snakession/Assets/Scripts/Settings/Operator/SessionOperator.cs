@@ -6,7 +6,6 @@ namespace Game.Operator
 public class SessionOperator : MonoBehaviour
 {
 	public AudioManager audios;
-	public KeyManager keys;
 	public DisplayManager displays;
 	public static SessionOperator i;
 
