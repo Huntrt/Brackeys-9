@@ -10478,6 +10478,8 @@ MonoBehaviour:
   levelText: {fileID: 560103457}
   maxHpAccuText: {fileID: 1793264037}
   foodEatenText: {fileID: 1103379175}
+  overBodyParticle: {fileID: 5765536358667131735, guid: 1ac7e48b6d8fab54fa94544b2e2f5ffb,
+    type: 3}
 --- !u!1 &1691323827
 GameObject:
   m_ObjectHideFlags: 0
