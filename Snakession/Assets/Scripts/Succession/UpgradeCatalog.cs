@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UpgradeCatalog : MonoBehaviour
@@ -7,6 +8,8 @@ public class UpgradeCatalog : MonoBehaviour
 		Haste, Stabilize, Steering, BiggerHead, Digest, FreshFood, Fertilizer
 	}
 
+	List<Upgrades> upgradeUsed = new List<Upgrades>();	
+
 	Snake snake; void Start() {snake = Snake.i;}
 
 	public void UseUpgrade(UpgradeInfo info) 
@@ -14,6 +17,8 @@ public class UpgradeCatalog : MonoBehaviour
 		//If able to spend for the given upgrade cost
 		if(Snake.i.money.Spend(info.cost))
 		{
+			//The given upgrade has been use
+			upgradeUsed.Add(info.upgrade);
 			//Upgrading given upgrade
 			Invoke(info.upgrade + "Upgrading", 0);
 			//Invoke end upgrade
