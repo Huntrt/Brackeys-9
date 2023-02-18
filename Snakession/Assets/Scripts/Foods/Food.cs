@@ -7,6 +7,7 @@ public class Food : MonoBehaviour
 	public float fresh;
 	[SerializeField] float randomRotation;
 	[HideInInspector] public Vector2 spawnCoord;
+	[SerializeField] ParticleSystem consumeEffect;
 	public System.Action onConsume;
 
 	void OnEnable()
@@ -33,6 +34,10 @@ public class Food : MonoBehaviour
 			Snake.i.Eat(feed, isVegan);
 			//Food has been consumed
 			onConsume?.Invoke();
+			//Play the consume effect
+			consumeEffect.Play();
+			//Unparent the effect from this food
+			consumeEffect.transform.SetParent(null);
 			//Pluck the food
 			Pluck();
 		}
