@@ -74,18 +74,18 @@ public class Snake : MonoBehaviour
 		body.head.transform.position = Vector3.zero;
 		//STtart an new eat count for this sucessor
 		eatenEachSuccession = 0;
-		//Reseting body part
-		body.ResetPart();
-		//Initial max health
-		maxHealth = initalHealth;
-		//Heal to full max health
-		Heal(maxHealth);
 		//Disable snake movement
 		movement.enabled = false;
 	}
 
 	public void ReleaseSnake()
 	{
+		//Initial max health
+		maxHealth = initalHealth;
+		//Heal to full max health
+		Heal(maxHealth);
+		//Reseting body part
+		body.ResetPart();
 		//Clear all the speed booste
 		mod.moveSpeedBoost.boosts.Clear();
 		//Enable snake movement
