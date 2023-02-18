@@ -4847,6 +4847,7 @@ GameObject:
   - component: {fileID: 2049876862}
   - component: {fileID: 2049876863}
   - component: {fileID: 2049876866}
+  - component: {fileID: 2049876861}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Untagged
@@ -4854,6 +4855,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2049876861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049876860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b74601628ff7af1409e28d5eafc9fe89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snake: {fileID: 2049876868}
+  healthText: {fileID: 1785643580}
+  healthBar: {fileID: 2110557622}
 --- !u!114 &2049876862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4991,8 +5007,7 @@ MonoBehaviour:
   mod: {fileID: 2049876862}
   money: {fileID: 2049876863}
   score: {fileID: 2049876866}
-  healthText: {fileID: 1785643580}
-  healthBar: {fileID: 2110557622}
+  info: {fileID: 2049876861}
 --- !u!1 &2110557620
 GameObject:
   m_ObjectHideFlags: 0

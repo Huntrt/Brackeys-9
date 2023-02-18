@@ -56,14 +56,14 @@ public class Snake : MonoBehaviour
 	{
 		health += amount;
 		health = Mathf.Clamp(health, 0, maxHealth);
-		info.RefreshHealthBar();
+		info.health.RefreshHealthBar();
 	}
 
 	public void Hurt(int amount)
 	{
 		health -= amount;
 		if(health <= 0) Destroy(gameObject);
-		info.RefreshHealthBar();
+		info.health.RefreshHealthBar();
 	}
 
 	public void ResetSnake()
