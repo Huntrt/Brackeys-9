@@ -1173,7 +1173,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.05, g: 0.05, b: 0.05, a: 0}
+  m_BackGroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1605,7 +1605,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   placer:
     quantity: 10
+    quantityLevelAdditive: 3
     chance: 100
+    chanceLevelAdditive: 5
     placeTraps:
     - obj: {fileID: 4974741918930583248, guid: 30dde1a8250441444a86289563d951d2, type: 3}
       weight: 10
@@ -1613,7 +1615,7 @@ MonoBehaviour:
       populateChance: 10
       populateLimit: 3
     - obj: {fileID: 8320080238583217259, guid: 295bea9fb9cc6e74eb3555c8cd259dfe, type: 3}
-      weight: 1
+      weight: 10
       requirement: 0
       populateChance: 50
       populateLimit: 3
@@ -1634,7 +1636,9 @@ MonoBehaviour:
       populateLimit: 5
   spawner:
     rate: 0.5
+    rateLevelAdditive: 2
     chance: 20
+    chanceLevelAdditive: 3
     rateTimer: 0
     spawnTraps:
     - obj: {fileID: 6379504904974702719, guid: f44afd822fee6e04a8b37960ffe2f4a9, type: 3}

@@ -6,12 +6,14 @@ public class TrapCreator : MonoBehaviour
 {
 	[SerializeField] Placer placer; [System.Serializable] public class Placer
 	{
-		public float quantity, chance; 
+		public float quantity, quantityLevelAdditive;
+		public float chance, chanceLevelAdditive;
 		public TrapDrop[] placeTraps;
 	}
 	[SerializeField] Spawner spawner; [System.Serializable] public class Spawner
 	{
-		public float rate, chance; 
+		public float rate, rateLevelAdditive;
+		public float chance, chanceLevelAdditive;
 		[HideInInspector] public float rateTimer;
 		public TrapDrop[] spawnTraps;
 	}
@@ -30,21 +32,21 @@ public class TrapCreator : MonoBehaviour
 
 	public void PlacingTrap()
 	{
-		//Go through all the quantity need to place
-		for (int q = 0; q < placer.quantity; q++)
-		{
-			//Create placer's traps with placer's chance
-			CreateTrap(placer.placeTraps, placer.chance);
+		//Go through all the quantity need to place that been additive by level
+		for (int q = 0; q < GetLevelAdditive(placer.quantityLevelAdditive, placer.quantity); q++)
+		{ 
+			//Create placer's traps with placer's chance that been additive by level
+			CreateTrap(placer.placeTraps, GetLevelAdditive(placer.chanceLevelAdditive, placer.chance));
 		}
 	}
 
 	void SpawningTrap()
 	{
-		//Counting the timer until reached the rate
-		spawner.rateTimer += Time.deltaTime; if(spawner.rateTimer >= spawner.rate)
+		//Counting the timer until reached the rate that been additivne by level
+		spawner.rateTimer += Time.deltaTime; if(spawner.rateTimer >= GetLevelAdditive(spawner.rateLevelAdditive, spawner.rate))
 		{
-			//Create spawner's traps with spawner's chance
-			CreateTrap(spawner.spawnTraps, spawner.chance);
+			//Create spawner's traps with spawner's chance that got additive by level
+			CreateTrap(spawner.spawnTraps, GetLevelAdditive(spawner.chanceLevelAdditive, spawner.chance));
 			//Reset rate timer
 			spawner.rateTimer -= spawner.rateTimer;
 		}
@@ -121,5 +123,12 @@ public class TrapCreator : MonoBehaviour
 			//The direction got choose no longer available
 			aDir.Remove(choose);
 		}
+	}
+
+	float GetLevelAdditive(float additive, float value)
+	{
+		//? Formula: Value + (((Additive * LV)/100) * Value)
+		//? (Additive)10 * (Level)3 = 30 / 100 = 0.3 * (Value)20 = 6 + (Value) 20 = 26
+		return value + (((additive * Map.i.level)/100) * value);
 	}
 }
