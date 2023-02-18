@@ -63,7 +63,7 @@ Gameplay:
 			✓ Cutter - Strike in an circle shape ervery X sec.
 			✓ Flame - Rapidly deal damage and give snake an small speed boost.
 			✓ Bomb - Randomly drop that explode.
-			▪ Turret - shoot bullet in an direction @consider
+			X Turret - shoot bullet in an direction @consider
 	Effects:
 		✓ Popup:
 			✓ When gain max health.
@@ -71,11 +71,17 @@ Gameplay:
 			✓ When got speed effect.
 			✓ When hurt.
 		▪ When tail appear.
-		▪ When grow. @consider
+		X When grow. @consider
 Menu:
 	✓ Start game.
 	✓ Pause game.
-	▪ Game over.
+	▪ Game over:
+		▪ Score.
+		▪ Level reached.
+		▪ Food eated.
+		▪ Max HP Accumulated.
+		▪ Damage taken.
+		▪ Longest Body. @consider
 	✓ Settings:
 		X Mouse or keyboard control option. @consider
 		X Keyboard control keybinds. @consider
