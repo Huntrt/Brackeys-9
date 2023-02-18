@@ -29,6 +29,6 @@ public class SnakeMoney : MonoBehaviour
 		float earn = Snake.i.maxHealth/earnEveryHealth;
 		Earn((int)earn);
 		//Display money has converted in format "MONEY (+12)92"
-		SuccessionManager.i.moneyConvertText.text = "= MONEY:" + " (+" + earn + ") " + money;
+		SuccessionManager.i.moneyConvertText.text = "= MONEY:" + " (+" + (int)earn + ") " + money;
 	}
 }
