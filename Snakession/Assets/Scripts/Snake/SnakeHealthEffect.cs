@@ -27,11 +27,15 @@ public class SnakeHealthEffect : MonoBehaviour
 		//Get the body's line renderer
 		bodyRenderer = snake.body.line;
 		//Clear any flash currently running
-		ClearFlashing();
+		ClearFlashing(); CancelInvoke();
 		//Save the default color of head
 		defaultHeadColor = bodyRenderer.startColor;
 		//Save the default color of tail
 		defaultTailColor = bodyRenderer.endColor;
+		//Set the while color edepnds on if is being hurt or being heal
+		SetWholeBodyColor((isHurt) ? hurtHeadColor : healHeadColor, (isHurt) ? hurtTailColor : healTailColor);
+		//Stop flashing after an amount of time
+		Invoke("ClearFlashing", flashDuration);
 	}
 
 	void ClearFlashing()

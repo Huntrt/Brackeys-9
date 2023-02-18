@@ -58,6 +58,7 @@ public class Snake : MonoBehaviour
 		health += amount;
 		health = Mathf.Clamp(health, 0, maxHealth);
 		healthEffect.RefreshHealthBar();
+		healthEffect.FlashingHealthStatus(false);
 	}
 
 	public void Hurt(int amount)
@@ -65,6 +66,7 @@ public class Snake : MonoBehaviour
 		health -= amount;
 		if(health <= 0) Destroy(gameObject);
 		healthEffect.RefreshHealthBar();
+		healthEffect.FlashingHealthStatus(true);
 	}
 
 	public void ResetSnake()

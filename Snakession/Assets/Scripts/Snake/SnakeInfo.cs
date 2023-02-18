@@ -12,7 +12,7 @@ public class SnakeInfo : MonoBehaviour
 		public void RefreshSpeedText()
 		{
 			//Display snake movement speed
-			speedText.text = snake.movement.moveSpeed.ToString();
+			speedText.text = "SPEED: " + snake.movement.moveSpeed;
 		}
 	}
 	
