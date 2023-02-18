@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sourceName: Slippery
   speedAlterAdditive: 200
-  decayDuration: 0.3
+  decayDuration: 0.1
 --- !u!212 &495578178615198134
 SpriteRenderer:
   m_ObjectHideFlags: 0
