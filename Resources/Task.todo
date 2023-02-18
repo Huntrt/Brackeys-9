@@ -73,15 +73,15 @@ Gameplay:
 		▪ When tail appear.
 		▪ When grow. @consider
 Menu:
-	▪ Start game.
+	✓ Start game.
 	▪ Pause game.
 	▪ Game over.
-	▪ Settings:
-		▪ Mouse or keyboard control option. @consider
-		▪ Keyboard control keybinds. @consider
-		▪ Volume slider.
-		▪ Display option.
-		▪ Mouse sensitivity. @consider
+	✓ Settings:
+		X Mouse or keyboard control option. @consider
+		X Keyboard control keybinds. @consider
+		✓ Volume slider.
+		✓ Display option.
+		X Mouse sensitivity. @consider
 	▪ Customize: @consider
 		▪ Custom:
 			▪ Snake color
