@@ -22,6 +22,8 @@ public class SnakeMovement : MonoBehaviour
 
 	void FixedUpdate()
 	{
+		//Max allow move speed is 25
+		moveSpeed = Mathf.Clamp(moveSpeed, 0f, 25f);
 		//If has reached 90% of an step toward mouse
 		if(Vector2.Distance(rb.position, mousePos) <= moveSpeed/90)
 		{
