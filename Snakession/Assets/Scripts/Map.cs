@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class Map : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class Map : MonoBehaviour
 	public List<PlotData> emptyPlots = new List<PlotData>();
 	public List<PlotData> filledPlots = new List<PlotData>();
 	public UnityEvent onMapCreate, onMapClear;
+	[Header("GUI")]
+	[SerializeField] TextMeshProUGUI levelText;
+
 
 	void Start()
 	{
@@ -44,6 +48,8 @@ public class Map : MonoBehaviour
 		emptyPlots.Clear(); filledPlots.Clear();
 		//Destroy the current map if it exist
 		if(currentMap != null) Destroy(currentMap.gameObject);
+		//Display the level counter
+		levelText.text = "LEVEL " + level;
 		//Map has been clear
 		onMapClear.Invoke();
 	}
