@@ -33,6 +33,8 @@ public class TextPopup : MonoBehaviour
 
 	void SendBatch()
 	{
+		//Stop if snake dont exist
+		if(Snake.i == null) return;
 		//Added all the popup text batch to one line of string
 		string batch = ""; for (int p = 0; p < popupBatchs.Count; p++) {batch += " " + popupBatchs[p];}
 		//Create the popup gui at snake head
