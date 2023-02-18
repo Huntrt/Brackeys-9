@@ -29,10 +29,8 @@ public class Snake : MonoBehaviour
 	public SnakeMoney money;
 	public SnakeScore score;
 	[Header("Health GUI")]
-	[SerializeField] int containerEveryHealth;
-	[SerializeField] Transform healthBar;
-	[SerializeField] GameObject healthContainer;
-	Image[] containerProgress;
+	[SerializeField] TextMeshProUGUI healthText;
+	[SerializeField] Image healthBar;
 
 	public void Eat(int amount, bool isVegan)
 	{
@@ -54,21 +52,20 @@ public class Snake : MonoBehaviour
 			//Decrease grow with requirement
 			growing -= growthEveryHealth;
 		}
-		RenewHealthBar();
 	}
 
 	public void Heal(int amount)
 	{
 		health += amount;
 		health = Mathf.Clamp(health, 0, maxHealth);
-		RefreshHealthContainer();
+		RefreshHealthBar();
 	}
 
 	public void Hurt(int amount)
 	{
 		health -= amount;
 		if(health <= 0) Destroy(gameObject);
-		RefreshHealthContainer();
+		RefreshHealthBar();
 	}
 
 	public void ResetSnake()
@@ -81,8 +78,6 @@ public class Snake : MonoBehaviour
 		body.ResetPart();
 		//Initial max health
 		maxHealth = initalHealth;
-		//Update the health bar
-		RenewHealthBar();
 		//Heal to full max health
 		Heal(maxHealth);
 		//Disable snake movement
@@ -97,40 +92,11 @@ public class Snake : MonoBehaviour
 		movement.enabled = true;
 	}
 
-	void RenewHealthBar()
+	void RefreshHealthBar()
 	{
-		//Stop if max health are 0
-		if(maxHealth == 0) return;
-		//Get how many coontainer needed for max hp
-		int containerCount = maxHealth/containerEveryHealth;
-		//Destroy all the container of current health bar
-		for (int b = 0; b < healthBar.childCount; b++) Destroy(healthBar.GetChild(b).gameObject);
-		//Prepare array for all the container
-		containerProgress = new Image[containerCount];
-		//Go through all the container needed
-		for (int c = 0; c < containerCount; c++)
-		{
-			//Create an new health container
-			GameObject container = Instantiate(healthContainer);
-			//Parent this health container to bar
-			container.transform.SetParent(healthBar);
-			//Get the image from this container children to be progress
-			containerProgress[c] = container.transform.GetChild(0).GetComponent<Image>();
-		}
-		RefreshHealthContainer();
-	}
-
-	void RefreshHealthContainer()
-	{
-		//Go through each of container progress
-		for (int c = 0; c < containerProgress.Length; c++)
-		{
-			//Get the this container progress
-			Image container = containerProgress[c];
-			//Get progress of by mulitple this container order with how health each container have
-			float progress = c * containerEveryHealth;
-			//Fill this health container with it progress base on current health
-			container.fillAmount = Mathf.Clamp01((health - progress) / progress);
-		}
+		//Fill health bar with health currently have 
+		healthBar.fillAmount = Mathf.Clamp01((float)health / (float)maxHealth);
+		//Display health text as 80/100
+		healthText.text = health + "\n----\n" + maxHealth;
 	}
 }
