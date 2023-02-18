@@ -23,6 +23,24 @@ TextureImporter:
   - first:
       213: -1480984688936448156
     second: Upgrades_Fertilize
+  - first:
+      213: -855806208316586141
+    second: Upgrades_Vegetarian
+  - first:
+      213: -1939666868790751462
+    second: Upgrades_Carnivore
+  - first:
+      213: -1271310309184709222
+    second: Upgrades_Nutrition
+  - first:
+      213: 3395873401682677
+    second: Upgrades_Leftover
+  - first:
+      213: 53535420967973741
+    second: Upgrades_HarderBody
+  - first:
+      213: 8258757346512102905
+    second: Upgrades_Agile
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -129,11 +147,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 240
+        y: 480
         width: 200
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,11 +168,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 240
-        y: 240
+        y: 480
         width: 200
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,11 +189,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 480
-        y: 240
+        y: 480
         width: 200
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +209,12 @@ TextureImporter:
       name: Upgrades_BiggerHead
       rect:
         serializedVersion: 2
-        x: 720
-        y: 240
+        x: 725
+        y: 480
         width: 200
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,12 +230,12 @@ TextureImporter:
       name: Upgrades_Digest
       rect:
         serializedVersion: 2
-        x: 960
-        y: 240
+        x: 961
+        y: 480
         width: 200
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -234,11 +252,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 245
         width: 200
         height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -254,6 +272,111 @@ TextureImporter:
       name: Upgrades_Fertilize
       rect:
         serializedVersion: 2
+        x: 245
+        y: 245
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f8622a54c727be0800000000000000
+      internalID: -1480984688936448156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrades_Vegetarian
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 240
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36747bca9c09f14f0800000000000000
+      internalID: -855806208316586141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrades_Carnivore
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 240
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1f0227724be415e0800000000000000
+      internalID: -1939666868790751462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrades_Nutrition
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 240
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9dd0cd62066b5ee0800000000000000
+      internalID: -1271310309184709222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrades_Leftover
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa3fc367801c0000800000000000000
+      internalID: 3395873401682677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrades_HarderBody
+      rect:
+        serializedVersion: 2
         x: 240
         y: 0
         width: 200
@@ -265,8 +388,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46f8622a54c727be0800000000000000
-      internalID: -1480984688936448156
+      spriteID: d6372b58e223eb000800000000000000
+      internalID: 53535420967973741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Upgrades_Agile
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f56005cc000d9270800000000000000
+      internalID: 8258757346512102905
       vertices: []
       indices: 
       edges: []

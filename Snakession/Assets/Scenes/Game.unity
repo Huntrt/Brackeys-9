@@ -6762,7 +6762,7 @@ GameObject:
   - component: {fileID: 1103379176}
   - component: {fileID: 1103379175}
   m_Layer: 5
-  m_Name: Damage Taken
+  m_Name: Food Eaten
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6807,7 +6807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '<align=left>Damage Taken<line-height=0>
+  m_text: '<align=left>Food Eaten<line-height=0>
 
     <align=right>--<line-height=1em>'
   m_isRightToLeft: 0
@@ -6819,8 +6819,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4282788607
-  m_fontColor: {r: 1, g: 0.16470587, b: 0.27262267, a: 1}
+    rgba: 4285005639
+  m_fontColor: {r: 0.2783019, g: 1, b: 0.40546262, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10439,6 +10439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1653676728}
+  - component: {fileID: 1653676729}
   m_Layer: 0
   m_Name: Game Over
   m_TagString: Untagged
@@ -10460,6 +10461,23 @@ Transform:
   m_Father: {fileID: 1694255196}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1653676729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653676727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39371abe989cd84c93ab009074075d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverPanel: {fileID: 2076328657}
+  scoreText: {fileID: 462407932}
+  levelText: {fileID: 560103457}
+  maxHpAccuText: {fileID: 1793264037}
+  foodEatenText: {fileID: 1103379175}
 --- !u!1 &1691323827
 GameObject:
   m_ObjectHideFlags: 0
