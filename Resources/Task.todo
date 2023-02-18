@@ -65,11 +65,11 @@ Gameplay:
 			✓ Bomb - Randomly drop that explode.
 			▪ Turret - shoot bullet in an direction @consider
 	Effects:
-		▪ Popup:
-			▪ When gain max health.
-			▪ When heal.
-			▪ When got speed effect.
-			▪ When hurt.
+		✓ Popup:
+			✓ When gain max health.
+			✓ When heal.
+			✓ When got speed effect.
+			✓ When hurt.
 		▪ When tail appear.
 		▪ When grow. @consider
 Menu:
