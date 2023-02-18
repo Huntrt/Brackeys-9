@@ -7,7 +7,7 @@ public class SnakeMoney : MonoBehaviour
 
 	public bool Spend(int price)
 	{
-		if(money - price > 0)
+		if(money - price >= 0)
 		{
 			money -= price;
 			return true;
