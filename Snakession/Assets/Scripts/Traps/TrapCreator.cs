@@ -76,7 +76,7 @@ public class TrapCreator : MonoBehaviour
 		for (int t = 0; t < traps.Length; t++)
 		{
 			//Get the trap that has the same object as weighted trap
-			if(weighted.obj == traps[t].obj) trap = traps[t];
+			if(weighted == traps[t]) trap = traps[t];
 		}
 		//Begin populated weighted trap at given coord
 		StartCoroutine(PopulateTrap(coord, trap, 0));

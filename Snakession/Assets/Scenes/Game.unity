@@ -1615,13 +1615,23 @@ MonoBehaviour:
     - obj: {fileID: 8320080238583217259, guid: 295bea9fb9cc6e74eb3555c8cd259dfe, type: 3}
       weight: 1
       requirement: 0
+      populateChance: 50
+      populateLimit: 3
+    - obj: {fileID: 8373175731909308884, guid: 5985781dc6f2c704c81141c04d6725e2, type: 3}
+      weight: 10
+      requirement: 2
       populateChance: 10
       populateLimit: 3
     - obj: {fileID: 7460733313422925239, guid: ec98f9da212fe864eadda572a9670e3c, type: 3}
       weight: 10
-      requirement: 0
-      populateChance: 10
+      requirement: 4
+      populateChance: 25
       populateLimit: 3
+    - obj: {fileID: 7460733313422925239, guid: ec98f9da212fe864eadda572a9670e3c, type: 3}
+      weight: 10
+      requirement: 6
+      populateChance: 50
+      populateLimit: 5
   spawner:
     rate: 0.5
     chance: 20
