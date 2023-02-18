@@ -100,8 +100,6 @@ public class DisplayControl : MonoBehaviour
 	{
 		public TMP_Dropdown dropdown;
 		[SerializeField] List<string> frameList;
-		[SerializeField] TextMeshProUGUI fpsCounter;
-		public float fpsCounterRefresh;
 
 		public void SetupDropdown()
 		{
