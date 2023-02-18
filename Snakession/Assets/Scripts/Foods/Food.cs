@@ -13,10 +13,14 @@ public class Food : MonoBehaviour
 	{
 		//Randomize the rotation when this food got spawn
 		transform.localRotation = Quaternion.Euler(0,0, Random.Range(0, randomRotation));
-		//Increase additive fresh food time
-		fresh += Snake.i.mod.freshAdditive.GetAdditive(fresh);
-		//Increase bonus fresh food time
-		fresh += Snake.i.mod.freshBonus.GetBonus();
+		//If snake exist
+		if(Snake.i != null)
+		{
+			//Increase additive fresh food time
+			fresh += Snake.i.mod.freshAdditive.GetAdditive(fresh);
+			//Increase bonus fresh food time
+			fresh += Snake.i.mod.freshBonus.GetBonus();
+		}
 		//Automaticly pluck this food when it no longer fresh
 		Invoke("Pluck", fresh);
 	}
