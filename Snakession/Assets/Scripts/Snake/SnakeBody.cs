@@ -66,8 +66,8 @@ public class SnakeBody : MonoBehaviour
 		//Set points for both trigger and collision collider
 		bodyColliders[0].SetPoints(bodyPart);
 		bodyColliders[1].SetPoints(bodyPart);
-		//Tail begin follwing the last body part if it has eat max jp
-		if(Snake.i.maxHealth >= maxHPNeedForTail) tail.position = bodyPart[bodyPart.Count-1];
+		//Tail begin follwing the last body part if it long enough
+		if(TailLongEnough()) tail.position = bodyPart[bodyPart.Count-1];
 	}
 
 	public void Grow()
@@ -77,8 +77,8 @@ public class SnakeBody : MonoBehaviour
 		partPos.Add(partPos[partPos.Count-1]);
 		//Set line position the same as body part count
 		line.positionCount = bodyPart.Count;
-		//Active the tail when has enough max hp
-		tail.gameObject.SetActive(Snake.i.maxHealth >= maxHPNeedForTail);
+		//Active the tail long enough
+		tail.gameObject.SetActive(TailLongEnough());
 		//Draw body instantly after grow
 		DrawBody();
 	}
@@ -86,5 +86,11 @@ public class SnakeBody : MonoBehaviour
 	public void EatingTail()
 	{
 		SuccessionManager.i.BeginSuccession();
+	}
+
+	bool TailLongEnough()
+	{
+		//Tai long enough when gained enough max health without take into account initial health
+		return Snake.i.maxHealth - Snake.i.initalHealth >= maxHPNeedForTail;
 	}
 }
