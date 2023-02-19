@@ -108,15 +108,15 @@ public class Map : MonoBehaviour
 		return null;
 	}
 
-	void OnDrawGizmos() 
-	{
-		//test: Draw an grey small cube on each plot
-		for (int p = 0; p < emptyPlots.Count; p++)
-		{
-			Gizmos.color = new Color(1f,1f,1f,0.1f); //transparent white
-			Gizmos.DrawWireCube(emptyPlots[p].position, Vector3.one * 0.2f);
-		}
-	}
+	// void OnDrawGizmos() 
+	// {
+	// 	//test Draw an grey small cube on each plot
+	// 	for (int p = 0; p < emptyPlots.Count; p++)
+	// 	{
+	// 		Gizmos.color = new Color(1f,1f,1f,0.1f); //transparent white
+	// 		Gizmos.DrawWireCube(emptyPlots[p].position, Vector3.one * 0.2f);
+	// 	}
+	// }
 
 	[System.Serializable] public class PlotSettings
 	{
