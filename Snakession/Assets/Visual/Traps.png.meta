@@ -23,6 +23,12 @@ TextureImporter:
   - first:
       213: 5735738129519079201
     second: Traps_Danger
+  - first:
+      213: 5958270868783894255
+    second: Traps_Nuke
+  - first:
+      213: -1338374957084398515
+    second: Traps_Thunder
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -167,48 +173,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Traps_Bomb
-      rect:
-        serializedVersion: 2
-        x: 480
-        y: 240
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8060a2f77a3311bc0800000000000000
-      internalID: -3814210614920083960
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Traps_Turret
-      rect:
-        serializedVersion: 2
-        x: 720
-        y: 240
-        width: 200
-        height: 200
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bc39ffac2e0749a0800000000000000
-      internalID: -6249010372859577160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Traps_Slippery
       rect:
         serializedVersion: 2
@@ -230,10 +194,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Traps_Mine
+      name: Traps_Danger
       rect:
         serializedVersion: 2
-        x: 0
+        x: 240
         y: 0
         width: 200
         height: 200
@@ -244,17 +208,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b424c420122b10c60800000000000000
-      internalID: 7782697485915144779
+      spriteID: 12fe5a6807f699f40800000000000000
+      internalID: 5735738129519079201
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Traps_Danger
+      name: Traps_Nuke
       rect:
         serializedVersion: 2
-        x: 240
+        x: 720
         y: 0
         width: 200
         height: 200
@@ -265,8 +229,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 12fe5a6807f699f40800000000000000
-      internalID: 5735738129519079201
+      spriteID: fee0c6179c700b250800000000000000
+      internalID: 5958270868783894255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Traps_Thunder
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 200
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ca4ba41132d6de0800000000000000
+      internalID: -1338374957084398515
       vertices: []
       indices: 
       edges: []
