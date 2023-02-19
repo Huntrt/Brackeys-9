@@ -5,7 +5,8 @@ public class UpgradeCatalog : MonoBehaviour
 {
     public enum Upgrades
 	{
-		Haste, Stabilize, Steering, BiggerHead, Digest, FreshFood, Fertilizer
+		Haste, Stabilize, Steering, BiggerHead, Digest, FreshFood, Fertilizer,
+		Vegetarian, Carnivore, Nutrition, Leftover, HarderBody, Agile
 	}
 
 	List<Upgrades> upgradeUsed = new List<Upgrades>();	
@@ -27,8 +28,8 @@ public class UpgradeCatalog : MonoBehaviour
 		//If out of money
 		else
 		{
-			//temp: Print out of money message
-			print("You are out of money");
+			//todo: Play out of money audio
+
 		}
 	}
 
@@ -79,4 +80,40 @@ public class UpgradeCatalog : MonoBehaviour
 		//! Lost food lifetime
 		snake.mod.freshAdditive.flex -= 2;
 	}
+	void VegetarianUpgrading()
+	{
+		//* Gain 5% from vegan food
+		snake.mod.foodMaxHPAdditive.vegan += 5;
+		//! Lost 2 food from meat
+		snake.mod.foodMaxHPBonus.meat -= 4;
+	}
+	void CarnivoreUpgrading()
+	{
+		//* Gain 7 food from meat
+		snake.mod.foodMaxHPBonus.meat += 7;
+		//! Lost 3% food vegan
+		snake.mod.foodMaxHPAdditive.vegan -= 4;
+	}
+	void NutritionUpgrading()
+	{
+		//* Gain 1 extra food from any source
+		snake.mod.foodMaxHPBonus.flex += 1;
+	}
+	void LeftoverUpgrading() 
+	{
+		//? Wait for 15 sec
+		Invoke("LeftoverDelay", 15f);
+	} void LeftoverDelay() {snake.Heal(25);} //* Heal 25
+	void HarderBodyUpgrading()
+	{
+		//* Increase initial health
+		snake.initalHealth += 7;
+		//? Lost 20% initial movement speed
+		snake.movement.InitialMoveSpeed -= 0.2f * snake.movement.InitialMoveSpeed;
+	}
+	void AgileUpgrading()
+	{
+		//* Wait for 0.1 sec
+		Invoke("AgileDelay", 0.1f);
+	} void AgileDelay() {snake.mod.moveSpeedBoost.AddBoost(30, 4, "Agile");} //? Gain 30% movespeed for 4 sec
 }

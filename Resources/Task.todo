@@ -8,7 +8,7 @@ Gameplay:
 			✓ Take damage.
 			✓ Longer and wider scale with max health.
 			✓ Hitbox the whole body.
-			▪ Slowly heal instead of instant when eat. @consider
+			X Slowly heal instead of instant when eat. @consider
 	Succession:
 		✓ Eating it own tails
 		✓ Convert max health:
@@ -34,12 +34,12 @@ Gameplay:
 		✓ Grid base.
 		✓ Access each grid.
 		✓ Random rotation when object spawn.
-		▪ Types:
+		✓ Types:
 			✓ Square.
 			✓ Plus.
 			✓ Diamond.
-			▪ Multi. @consider
-			▪ Cross. @consider
+			X Multi. @consider
+			X Cross. @consider
 	Foods:
 		✓ Randomly spawn.
 		✓ All food will give max hp.

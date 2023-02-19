@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c29458e724186b4683922abffe5b1f0, type: 3}
-  m_Name: Digest
+  m_Name: Agile
   m_EditorClassIdentifier: 
-  upgrade: 4
-  cost: 20
-  weight: 10
-  icon: {fileID: 249568837803001356, guid: c27eb327ac511664eb0acd0ca1214c6e, type: 3}
-  iconColor: {r: 1, g: 0.909419, b: 0.35500002, a: 1}
-  description: Gain 5% feed from any food
+  upgrade: 12
+  cost: 4
+  weight: 42
+  icon: {fileID: 8258757346512102905, guid: c27eb327ac511664eb0acd0ca1214c6e, type: 3}
+  iconColor: {r: 0.3254717, g: 0.6596044, b: 1, a: 1}
+  description: Gain 30% movement speed for 4 second once for the next level
