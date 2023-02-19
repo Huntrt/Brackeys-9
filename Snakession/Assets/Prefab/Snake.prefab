@@ -232,7 +232,8 @@ MonoBehaviour:
   maxHealth: 0
   health: 0
   growthEveryHealth: 5
-  eatenEachSuccession: 0
+  foodEaten: 0
+  totalMaxHPGained: 0
   body: {fileID: 8758721096944720643}
   movement: {fileID: 8758721096944720640}
   mod: {fileID: 8758721096944720894}

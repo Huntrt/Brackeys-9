@@ -4597,9 +4597,14 @@ MonoBehaviour:
       populateLimit: 3
     - obj: {fileID: 7460733313422925239, guid: ec98f9da212fe864eadda572a9670e3c, type: 3}
       weight: 10
-      requirement: 6
+      requirement: 8
       populateChance: 50
       populateLimit: 5
+    - obj: {fileID: 8000434037396741282, guid: d20629f1e3f3c2645b0374a0acb58317, type: 3}
+      weight: 30
+      requirement: 7
+      populateChance: 65
+      populateLimit: 1
   spawner:
     rate: 0.5
     rateLevelAdditive: 2
@@ -11923,7 +11928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352345d0ca1632c478c25e98fad5fdd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 20
   mapTypes:
   - obj: {fileID: 4497463237538086313, guid: 0bb4c299a828523438ea6a1f4a75108e, type: 3}
     weight: 20
