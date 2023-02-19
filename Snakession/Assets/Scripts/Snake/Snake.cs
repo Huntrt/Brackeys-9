@@ -30,6 +30,7 @@ public class Snake : MonoBehaviour
 	public SnakeScore score;
 	public SnakeInfo info;
 	public SnakeHealthEffect healthEffect;
+	[SerializeField] ParticleSystem releasedEffect;
 
 	public void Eat(int amount, bool isVegan)
 	{
@@ -109,5 +110,7 @@ public class Snake : MonoBehaviour
 		mod.moveSpeedBoost.boosts.Clear();
 		//Enable snake movement
 		movement.enabled = true;
+		//Play released effect
+		releasedEffect.Play();
 	}
 }
