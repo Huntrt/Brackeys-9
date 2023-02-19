@@ -23,6 +23,7 @@ public class GameOver : MonoBehaviour
 
 	public void GameIsOver()
 	{
+		AudioPlayer.i.Play(AudioPlayer.i.overAudio);
 		//Show the game over panel
 		gameOverPanel.SetActive(true);
 		//@ Display info as Info                000

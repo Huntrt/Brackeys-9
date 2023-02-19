@@ -34,6 +34,7 @@ public class Snake : MonoBehaviour
 
 	public void Eat(int amount, bool isVegan)
 	{
+		AudioPlayer.i.Play(AudioPlayer.i.eatAudio);
 		//Begin increase the additive amount gain from mod 
 		amount += mod.foodMaxHPAdditive.GetAdditive(amount, isVegan);
 		//Begin increase the bonus amount gain from mod
@@ -72,6 +73,7 @@ public class Snake : MonoBehaviour
 
 	public void Hurt(int amount)
 	{
+		AudioPlayer.i.Play(AudioPlayer.i.hurtAudio);
 		//Lose health with amount given
 		health -= amount;
 		//If out of health
@@ -112,5 +114,7 @@ public class Snake : MonoBehaviour
 		movement.enabled = true;
 		//Play released effect
 		releasedEffect.Play();
+		//Play next level audio
+		AudioPlayer.i.Play(AudioPlayer.i.nextLevelAudio);
 	}
 }

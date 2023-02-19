@@ -17,7 +17,7 @@ public class AudioPlayer : MonoBehaviour
 	}
 	#endregion
 
-   	public AudioClip eatAudio, hurtAudio, overAudio, upgradeAudio, outMoneyAudio, spawnAudio, tailAudio;
+   	public AudioClip eatAudio, hurtAudio, overAudio, nextLevelAudio, outMoneyAudio, tailAudio;
 
 	public void Play(AudioClip audio)
 	{

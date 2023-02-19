@@ -5797,6 +5797,7 @@ GameObject:
   - component: {fileID: 949508459}
   - component: {fileID: 949508458}
   - component: {fileID: 949508457}
+  - component: {fileID: 949508460}
   m_Layer: 0
   m_Name: Stage Operator
   m_TagString: Untagged
@@ -5862,6 +5863,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &949508460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 949508456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ec05abe3310d742a051e68b325df89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eatAudio: {fileID: 8300000, guid: 3c2583e94de1c2f41a9be725429a5f4f, type: 3}
+  hurtAudio: {fileID: 8300000, guid: f7937c3363f31a84a9a22dda57b98c16, type: 3}
+  overAudio: {fileID: 8300000, guid: b0a434f7ddcdf5e4394f2f9ebc4b2bcb, type: 3}
+  nextLevelAudio: {fileID: 8300000, guid: be562c0e7b6ee864db060d306a187f20, type: 3}
+  outMoneyAudio: {fileID: 8300000, guid: 41e417120145404429a2b5850e754550, type: 3}
+  tailAudio: {fileID: 8300000, guid: 4e3f57bbb2b8f124e891a339c5bf3f1b, type: 3}
 --- !u!1 &949638674
 GameObject:
   m_ObjectHideFlags: 0

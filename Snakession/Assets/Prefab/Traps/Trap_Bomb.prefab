@@ -52,6 +52,7 @@ MonoBehaviour:
   explosionEffects:
   - {fileID: 4223621938765496786}
   - {fileID: 1152057362867868507}
+  explodeAudio: {fileID: 8300000, guid: 80d20c55b6a188044970aee3335729c2, type: 3}
 --- !u!212 &3052128436715415581
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -13,5 +13,6 @@ public class SnakeTailCollision : MonoBehaviour
 	void OnEnable()
 	{
 		tailAppearEffect.Play();
+		AudioPlayer.i.Play(AudioPlayer.i.tailAudio);
 	}
 }

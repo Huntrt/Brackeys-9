@@ -14,6 +14,7 @@ public class SnakeMoney : MonoBehaviour
 		}
 		else
 		{
+			AudioPlayer.i.Play(AudioPlayer.i.outMoneyAudio);
 			return false;
 		}
 	}

@@ -25,12 +25,6 @@ public class UpgradeCatalog : MonoBehaviour
 			//Invoke end upgrade
 			Invoke("EndUpgrade", 0);
 		}
-		//If out of money
-		else
-		{
-			//todo: Play out of money audio
-
-		}
 	}
 
 	
