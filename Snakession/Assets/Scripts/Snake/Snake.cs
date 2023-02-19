@@ -42,8 +42,8 @@ public class Snake : MonoBehaviour
 		foodEaten++;
 		//Increase the amount has gained for max health
 		totalMaxHPGained += amount;
-		//Popup the amount has grow "^23"(Yellow)
-		TextPopup.i.Popuping("<#ffff1f>^"+ amount +"</color>");
+		//Popup the amount has grow only when eat something "^23"(Yellow)
+		if(amount > 0) TextPopup.i.Popuping("<#ffff1f>^"+ amount +"</color>");
 		//Increase max health than heal with given amount
 		maxHealth += amount; Heal(amount);
 		//Grow with the amount has given
