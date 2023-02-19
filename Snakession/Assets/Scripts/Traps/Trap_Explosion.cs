@@ -5,9 +5,12 @@ public class Trap_Explosion : MonoBehaviour
 	public int damage;
 	public float radius;
 	[SerializeField] ParticleSystem[] explosionEffects;
+	[SerializeField] AudioClip explodeAudio;
 
 	public void Explode()
 	{
+		//Play explosion sound
+		AudioPlayer.i.Play(explodeAudio);
 		//Go through all the explosion effect
 		for (int e = 0; e < explosionEffects.Length; e++)
 		{
