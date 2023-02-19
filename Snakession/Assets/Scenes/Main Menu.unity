@@ -2961,7 +2961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundSource: {fileID: 932337232}
   musicSource: {fileID: 932337231}
-  masterVolume: 20
+  masterVolume: 50
   soundVolume: 65
   musicVolume: 25
 --- !u!114 &932337234

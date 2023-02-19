@@ -4929,7 +4929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodCore: {fileID: 7288531946462577263}
   replicateAmount: 1
-  replicateChance: 15
+  replicateChance: 5
 --- !u!212 &7288531946462577262
 SpriteRenderer:
   m_ObjectHideFlags: 0
