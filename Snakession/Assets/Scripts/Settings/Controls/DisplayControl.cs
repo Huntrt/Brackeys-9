@@ -52,8 +52,6 @@ public class DisplayControl : MonoBehaviour
 
 		public void SetupDropdown()
 		{
-			//? Dont setup resolution drop down if running webgl
-			if(Application.platform == RuntimePlatform.WebGLPlayer) return;
 			//Create an new list of string for available resolution
 			List<string> availRes = new List<string>();
 			//The index of screen size currently use
@@ -84,8 +82,6 @@ public class DisplayControl : MonoBehaviour
 
 		public void ChangeResolution(int c)
 		{
-			//? Dont change resolution if running webgl
-			if(Application.platform == RuntimePlatform.WebGLPlayer) return;
 			//Get the highest resolution available if havent choose an any
 			if(c == -1) c = Screen.resolutions.Length-1;
 			//Set it dropdown value to given value
